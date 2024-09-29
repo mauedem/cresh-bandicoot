@@ -1,0 +1,16 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: 30px;
+}
+
+.footer__text {
+    font-family: "Bagel Fat One", sans-serif;
+    color: #fff;
+    font-size: 12px;
+    line-height: 17px;
+    text-align: center;
+    max-width: 1000px;
+}

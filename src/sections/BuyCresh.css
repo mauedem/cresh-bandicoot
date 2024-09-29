@@ -1,0 +1,14 @@
+.buy-cresh {
+    height: 1462px;
+    max-width: 1748px;
+    width: 100%;
+    background-image: url(../assets/sections/buy-cresh/BuyCreshBg.png);
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-color: #16257C;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+}
