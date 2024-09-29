@@ -1,0 +1,17 @@
+.about {
+    position: relative;
+    height: 2159px;
+    max-width: 1748px;
+    width: 100%;
+    background-image: url(../assets/sections/about/AboutBg.png);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.about__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

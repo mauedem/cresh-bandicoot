@@ -1,0 +1,54 @@
+.buy-cresh-card {
+    position: relative;
+    top: 800px;
+    width: 720px;
+    height: 345px !important;
+    border: 5.4px solid #003399;
+    border-radius: 20px;
+    background-image: url(../../assets/sections/buy-cresh/BuyCreshCardBg.png) !important;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+}
+
+.buy-cresh-card__title {
+    font-family: "Bagel Fat One", sans-serif;
+    font-size: 64px;
+    line-height: 51px;
+    text-align: center;
+}
+
+.buy-cresh-card__title--red {
+    color: #D71118;
+}
+
+.buy-cresh-card__title--blue {
+    color: #003399;
+}
+
+.step {
+    width: 308px;
+}
+
+.step__subtitle {
+    font-family: "Bagel Fat One", sans-serif;
+    font-size: 24px;
+    color: #D71118;
+    line-height: 34px;
+}
+
+.step__title {
+    font-family: "Bagel Fat One", sans-serif;
+    font-size: 32px;
+    line-height: 46px;
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+
+.step__text {
+    font-family: "Bagel Fat One", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 20px;
+}

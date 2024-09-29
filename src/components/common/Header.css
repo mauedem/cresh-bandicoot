@@ -1,0 +1,42 @@
+.header {
+    display: flex;
+    align-items: center;
+    padding: 24px 10px;
+}
+
+.header--fixed {
+    display: flex;
+    position: fixed !important;
+    right: 0;
+    z-index: 9999;
+}
+
+.header__links {
+    margin-left: auto;
+}
+
+.header__nav-btn {
+    margin-right: 10px;
+}
+
+.buy-cresh-btn {
+    font-family: "Bagel Fat One", sans-serif;
+    color: #fff;
+    background-color: #D71118;
+    border-radius: 108px;
+    border: 3.6px solid #FFAF8D;
+    padding: 10px 18px;
+    font-size: 27px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.buy-cresh-btn:hover {
+    background-color: #bf0f15;
+}
+
+.buy-cresh-btn__img {
+    margin-left: 14px;
+    margin-right: 14px;
+}
