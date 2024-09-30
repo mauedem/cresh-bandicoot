@@ -5,9 +5,12 @@ import './Header.css'
 
 import Star from "../../assets/sections/buy-cresh/Star.svg"
 import {LINK_ITEMS, NAV_ITEMS} from "../../utils/constants";
+import {useEffect, useState} from "react";
 
 
 function Header() {
+    const [isTheEndOfPage, setIsTheEndOfPage] = useState(false);
+
     const navItems = NAV_ITEMS.map(
         item => {
             return (
@@ -37,11 +40,28 @@ function Header() {
         }
     );
 
+    useEffect(() => {
+        const onScroll = () => {
+            const result = window.scrollY + 1 >= document.documentElement.scrollHeight-document.documentElement.clientHeight;
+
+            if (result && !isTheEndOfPage) {
+                setIsTheEndOfPage(true);
+            } else if (!result && isTheEndOfPage) {
+                setIsTheEndOfPage(false);
+            }
+        }
+
+        window.removeEventListener('scroll', onScroll);
+        window.addEventListener('scroll', onScroll, { passive: true });
+
+        return () => window.removeEventListener('scroll', onScroll);
+    }, [isTheEndOfPage]);
+
     return (
         <header className="header">
             <nav className="header__nav">{navItems}</nav>
 
-            <div className="header--fixed">
+            <div className={!isTheEndOfPage ? 'header--fixed' : 'header--static' }>
                 <div className="header__links">{linkItems}</div>
 
                 <button className="buy-cresh-btn">

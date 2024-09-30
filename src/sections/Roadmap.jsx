@@ -36,19 +36,19 @@ function Roadmap() {
                 src={CreshCounting} alt=""
             />
 
-            <div style={{position: 'relative', marginTop: '400px'}}>
+            <div style={{position: 'relative', marginTop: '380px'}}>
                 <img
-                    style={{position: "absolute", top: '-50px', left: '14%'}}
+                    style={{position: "absolute", top: '-36px', left: '14%'}}
                     src={Island1} alt=""
                 />
 
                 <img
-                    style={{position: "absolute", top: '43%', left: '38%'}}
+                    style={{position: "absolute", top: '43%', left: '39%'}}
                     src={Island2} alt=""
                 />
 
                 <img
-                    style={{position: "absolute", top: '-50px', right: '20%'}}
+                    style={{position: "absolute", top: '-50px', right: '22%'}}
                     src={Island3} alt=""
                 />
             </div>
