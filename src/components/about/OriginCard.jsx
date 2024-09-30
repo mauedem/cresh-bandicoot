@@ -43,6 +43,7 @@ function OriginCard() {
                     onClick={() => handleClick(true)}
                     className="origin-card__btn"
                     style={{ marginRight: '10px' }}
+                    disabled={isFirstPartShown}
                 >
                     <img src={ArrowLeft} alt=""/>
                 </button>
@@ -50,6 +51,7 @@ function OriginCard() {
                 <button
                     onClick={() => handleClick(false)}
                     className="origin-card__btn"
+                    disabled={!isFirstPartShown}
                 >
                     <img src={ArrowRight} alt=""/>
                 </button>

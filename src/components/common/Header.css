@@ -30,10 +30,12 @@
     cursor: pointer;
     display: flex;
     align-items: center;
+    box-shadow: 0 7px 0 0 #003399;
 }
 
 .buy-cresh-btn:hover {
-    background-color: #bf0f15;
+    background-color: #FF353C;
+    border: 3.6px solid #CCDDFF;
 }
 
 .buy-cresh-btn__img {
