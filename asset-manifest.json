@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/cresh-bandicoot/static/css/main.34fd86e2.css",
-    "main.js": "/cresh-bandicoot/static/js/main.9337cc28.js",
+    "main.css": "/cresh-bandicoot/static/css/main.955fb807.css",
+    "main.js": "/cresh-bandicoot/static/js/main.88f7ff24.js",
     "static/js/453.e5d06277.chunk.js": "/cresh-bandicoot/static/js/453.e5d06277.chunk.js",
     "static/media/AboutBg.png": "/cresh-bandicoot/static/media/AboutBg.419726a890f44470e55b.png",
-    "static/media/BuyCreshBg.png": "/cresh-bandicoot/static/media/BuyCreshBg.272cc5df019ca50fcd15.png",
+    "static/media/BuyCreshBg.png": "/cresh-bandicoot/static/media/BuyCreshBg.3cfa6c69540faa0f7249.png",
     "static/media/GirlFlying.svg": "/cresh-bandicoot/static/media/GirlFlying.e647a9efdf554e580ef0e8d1d3144ae9.svg",
     "static/media/BagelFatOne-Regular.ttf": "/cresh-bandicoot/static/media/BagelFatOne-Regular.036565a8126d1bf2ae0c.ttf",
     "static/media/Box.svg": "/cresh-bandicoot/static/media/Box.ff0b899092972b62437396749071cba0.svg",
     "static/media/RoadmapBg.png": "/cresh-bandicoot/static/media/RoadmapBg.1efa3632dad7d3aa0da7.png",
     "static/media/TokenomicsBg.png": "/cresh-bandicoot/static/media/TokenomicsBg.6dcd11467560b46587a2.png",
+    "static/media/CreshBuying.svg": "/cresh-bandicoot/static/media/CreshBuying.42dfeba3fa449290382895a2ddc00d9f.svg",
     "static/media/CreshBandicoot.svg": "/cresh-bandicoot/static/media/CreshBandicoot.738517ba134699661475a36ab57bd9a4.svg",
     "static/media/LeftPalm.svg": "/cresh-bandicoot/static/media/LeftPalm.8a3162fcbf5dbf8a63b03dd25966c8be.svg",
     "static/media/Treasure.svg": "/cresh-bandicoot/static/media/Treasure.a2095afcae3cb601b6678b431df9fe23.svg",
@@ -18,6 +19,7 @@
     "static/media/Mask.svg": "/cresh-bandicoot/static/media/Mask.53b69d3d709befe8d1e815e355517a83.svg",
     "static/media/Island3.svg": "/cresh-bandicoot/static/media/Island3.c01a6a8d1c6001ca2068139f7f7fe0e1.svg",
     "static/media/Island1.svg": "/cresh-bandicoot/static/media/Island1.ce5fb17dc2c259063bb4cab387b2ca8a.svg",
+    "static/media/GirlWatching.svg": "/cresh-bandicoot/static/media/GirlWatching.d3a0ced3717bbe52460517bd87e718ef.svg",
     "static/media/CreshCounting.svg": "/cresh-bandicoot/static/media/CreshCounting.2b48c6efc706f9d96bab3e8c78cb232d.svg",
     "static/media/Flag.svg": "/cresh-bandicoot/static/media/Flag.8d2671a6cd2abdaf099b0bf4a0d3f0d1.svg",
     "static/media/Island2.svg": "/cresh-bandicoot/static/media/Island2.bfca304c8d4f236b44dc9afc65bfdb4c.svg",
@@ -38,12 +40,12 @@
     "static/media/TreasureShadow.svg": "/cresh-bandicoot/static/media/TreasureShadow.9cf498e1b517067faafd4066dfe892ee.svg",
     "static/media/EmptyCircle.svg": "/cresh-bandicoot/static/media/EmptyCircle.a8bb83e196f1f67bed48955685dbd10c.svg",
     "static/media/FilledCircle.svg": "/cresh-bandicoot/static/media/FilledCircle.824c62fc5979088bf92a6aed065309e9.svg",
-    "main.34fd86e2.css.map": "/cresh-bandicoot/static/css/main.34fd86e2.css.map",
-    "main.9337cc28.js.map": "/cresh-bandicoot/static/js/main.9337cc28.js.map",
+    "main.955fb807.css.map": "/cresh-bandicoot/static/css/main.955fb807.css.map",
+    "main.88f7ff24.js.map": "/cresh-bandicoot/static/js/main.88f7ff24.js.map",
     "453.e5d06277.chunk.js.map": "/cresh-bandicoot/static/js/453.e5d06277.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.34fd86e2.css",
-    "static/js/main.9337cc28.js"
+    "static/css/main.955fb807.css",
+    "static/js/main.88f7ff24.js"
   ]
 }
