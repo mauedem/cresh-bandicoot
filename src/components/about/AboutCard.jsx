@@ -24,7 +24,10 @@ function AboutCard() {
                 </span>
             </div>
 
-            <img style={{ width: '355px', height: '38.4px', marginTop: '20px' }} src={AboutCardStars} alt=""/>
+            <img
+                className="about-card__decoration"
+                src={AboutCardStars} alt=""
+            />
         </article>
     )
 }

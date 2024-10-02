@@ -7,3 +7,27 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .tokenomics {
+        height: 650px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .tokenomics {
+        height: 550px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .tokenomics {
+        height: 400px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 575px) {
+    .tokenomics {
+        height: 264px;
+    }
+}

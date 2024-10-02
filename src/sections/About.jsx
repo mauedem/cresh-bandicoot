@@ -20,124 +20,81 @@ import Coin2 from "../assets/sections/about/Coin2.svg"
 function About() {
     return (
         <section className="about">
-            <Header />
+            <Header/>
 
-            <div className="about__content">
-                <img style={{
-                    position: "absolute",
-                    top: 8,
-                    zIndex: 10,
-                    height: '410px',
-                    width: '205px',
-                }} src={CreshBandicoot} alt=""/>
+            <div className="about__cresh-content">
+                <img
+                    className="about__cresh-bandicoot"
+                    src={CreshBandicoot} alt=""
+                />
 
-                <img style={{
-                    position: "relative",
-                    top: 402,
-                    left: -30,
-                    width: '167px',
-                    height: '165px'
-                }} src={Box} alt=""/>
+                <img
+                    className="about__box"
+                    src={Box} alt=""
+                />
 
-                <div style={{position: "absolute", top: 470}}>
-                    <CreshCard />
+                <div className="about__cresh-card">
+                    <CreshCard/>
                 </div>
             </div>
 
             <img
-                style={{position: "absolute", top: 0, right: 0, zIndex: 0}}
+                className="about__right-palm"
                 height="686px"
                 src={RightPalm}
                 alt=""
             />
 
             <img
-                style={{position: "absolute", top: '6%'}}
+                className="about__left-palm"
                 src={LeftPalm} alt=""
             />
 
             <img
-                style={{position: "relative", top: 292, left: '77%', zIndex: 100}}
+                className="about__flag"
                 src={Flag} alt=""
             />
 
-            <div style={{position: 'relative', marginTop: '440px'}}>
-                <div style={{display: 'flex', justifyContent: 'center'}}>
-                    <AboutCard/>
-                </div>
-
-                <div style={{ position: 'relative' }}>
+            <div className="about__about-content">
+                <div style={{position: 'relative'}}>
                     <img
-                        style={{
-                            position: "relative",
-                            left: '40px',
-                            bottom: '130px',
-                            height: '481px',
-                            width: '457px'
-                        }}
+                        className="about__girl-flying"
                         src={GirlFlying} alt=""
                     />
 
                     <img
-                        style={{
-                            position: "absolute",
-                            bottom: '200px',
-                            right: '22%',
-                            height: '321px',
-                            width: '282px'
-                        }}
+                        className="about__cresh-riding"
                         src={CreshRiding} alt=""
                     />
 
                     <img
-                        style={{
-                            position: "absolute",
-                            bottom: '98px',
-                            right: '64px',
-                            height: '263px',
-                            width: '221px',
-                            zIndex: 10
-                        }}
+                        className="about__treasure"
                         src={Treasure} alt=""
                     />
 
                     <img
-                        style={{
-                            position: "absolute",
-                            right: '16px',
-                            bottom: '-1px',
-                            height: '263px',
-                            width: '221px'
-                        }}
+                        className="about__treasure-shadow"
                         src={TreasureShadow} alt=""
                     />
 
                     <img
-                        style={{
-                            position: "absolute",
-                            bottom: '78px',
-                            right: '23%',
-                            height: '47px',
-                            width: '67px'
-                        }}
+                        className="about__coin-1"
                         src={Coin1} alt=""
                     />
 
                     <img
-                        style={{
-                            position: "absolute",
-                            bottom: '-130px',
-                            right: '26%',
-                            height: '66px',
-                            width: '104px'
-                        }}
+                        className="about__coin-2"
                         src={Coin2} alt=""
                     />
                 </div>
 
-                <div style={{display: 'flex', justifyContent: 'center', marginTop: '-150px'}}>
-                    <OriginCard />
+                <div className="about__about-card">
+                    <AboutCard/>
                 </div>
+            </div>
+
+            <div className="about__origin-content">
+                <OriginCard/>
             </div>
         </section>
     )

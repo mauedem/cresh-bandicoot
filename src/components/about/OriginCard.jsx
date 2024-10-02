@@ -18,7 +18,7 @@ function OriginCard() {
             <div className="origin-card__title">
                 <a>The Origins of Cresh</a>
             </div>
-            <div className="origin-card__text">
+            <div className="origin-card__content">
                 {isFirstPartShown ?
                     <span>
                         Once a regular presidential candidate, Cresh Trump
@@ -38,11 +38,11 @@ function OriginCard() {
                 }
             </div>
 
-            <div style={{ marginTop: '30px' }}>
+            <div className="origin-card__controller">
                 <button
                     onClick={() => handleClick(true)}
                     className="origin-card__btn"
-                    style={{ marginRight: '10px' }}
+                    style={{marginRight: '10px'}}
                     disabled={isFirstPartShown}
                 >
                     <img src={ArrowLeft} alt=""/>
@@ -57,7 +57,10 @@ function OriginCard() {
                 </button>
             </div>
 
-            <img style={{ width: '355px', height: '38.4px', marginTop: '30px' }} src={AboutCardStars} alt=""/>
+            <img
+                className="origin-card__decoration"
+                src={AboutCardStars} alt=""
+            />
         </article>
     )
 }

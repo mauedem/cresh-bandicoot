@@ -1,0 +1,46 @@
+.mobile-menu {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #16257C !important;
+    z-index: 99999;
+}
+
+.mobile-menu__close-menu-btn {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border: 3.6px solid #003399;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.mobile-menu__cresh-bandicot {
+    position: relative;
+    z-index: 10;
+    height: 161px;
+    width: 81px;
+}
+
+@media (min-width: 320px) and (max-width: 1199px) {
+    .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .mobile-menu__close-menu-btn {
+        height: 60px;
+        width: 60px;
+    }
+
+    .mobile-menu__close-menu-img {
+        height: 30px;
+        width: 30px;
+    }
+}
+

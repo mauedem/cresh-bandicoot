@@ -10,9 +10,19 @@
     overflow-x: hidden;
 }
 
+.app__footer {
+    width: 100%;
+}
+
 @font-face {
     font-family: "Bagel Fat One";
     font-style: normal;
     font-weight: 400;
     src: url("assets/fonts/Bagel_Fat_One/BagelFatOne-Regular.ttf") format("truetype");
+}
+
+@media (min-width: 768px) {
+    .app__footer {
+        display: none;
+    }
 }

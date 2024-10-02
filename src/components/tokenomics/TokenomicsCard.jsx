@@ -2,7 +2,6 @@ import './TokenomicsCard.css'
 
 import AboutCardStars from "../../assets/sections/about/AboutCardStars.svg"
 
-
 function TokenomicsCard() {
     return (
         <article className="tokenomics-card" style={{ marginTop: '180px' }}>
@@ -38,7 +37,10 @@ function TokenomicsCard() {
                 </div>
             </div>
 
-            <img style={{width: '355px', height: '38.4px', marginTop: '16px'}} src={AboutCardStars} alt=""/>
+            <img
+                className="tokenomics-card__decoration"
+                src={AboutCardStars} alt=""
+            />
         </article>
     )
 }

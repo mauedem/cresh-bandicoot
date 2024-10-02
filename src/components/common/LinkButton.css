@@ -10,3 +10,10 @@
 .link-button:hover {
     border: 3.6px solid #D71118
 }
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .link-button {
+        height: 54px;
+        width: 54px;
+    }
+}

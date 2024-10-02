@@ -10,6 +10,7 @@
     flex-direction: column;
     align-items: center;
     border-radius: 20px;
+    z-index: 999;
 }
 
 .origin-card__title {
@@ -21,7 +22,7 @@
     line-height: 51px;
 }
 
-.origin-card__text {
+.origin-card__content {
     font-family: "Bagel Fat One", sans-serif;
     font-size: 16px;
     color: #000;
@@ -42,4 +43,46 @@
 
 .origin-card__btn:hover {
     background-color: #003399;
+}
+
+.origin-card__controller {
+    margin-top: 30px;
+}
+
+.origin-card__decoration {
+    width: 355px;
+    height: 38px;
+    margin-top: 30px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .origin-card {
+        width: 300px;
+        height: 333px;
+        transform: rotate(0deg);
+    }
+
+    .origin-card__title {
+        font-size: 36px;
+        line-height: 28px;
+    }
+
+    .origin-card__content {
+        font-size: 12px;
+        line-height: 17px;
+    }
+
+    .origin-card__controller {
+        margin-top: 20px;
+    }
+
+    .origin-card__decoration {
+        width: 246px;
+        margin-top: 10px;
+    }
+
+    .origin-card__btn {
+        height: 24px;
+        width: 50px;
+    }
 }

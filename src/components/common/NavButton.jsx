@@ -1,16 +1,14 @@
 import './NavButton.css'
 
-function NavButton({ buttonText, buttonHref, className }) {
+function NavButton({ buttonText, buttonHref, className, handleClick }) {
     const classNames = className + ' nav-button';
 
     return (
-        <button className={classNames}>
-            <a
-                href={buttonHref}
-                className="nav-button__link"
-            >
-                {buttonText}
-            </a>
+        <button
+            className={classNames}
+            onClick={handleClick}
+        >
+            <span className="nav-button__link">{buttonText}</span>
         </button>
     )
 }

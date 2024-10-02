@@ -14,9 +14,10 @@
 .cresh-card__title {
     font-family: "Bagel Fat One", sans-serif;
     font-size: 96px;
+    line-height: 76px;
     color: #D71118;
     position: absolute;
-    top: 18px;
+    top: 48px;
     margin-left: 10px;
 }
 
@@ -30,4 +31,30 @@
 .cresh-card__decoration:last-child {
     margin-top: auto;
     margin-bottom: 8px;
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .cresh-card {
+        height: 138px;
+        width: 430px;
+    }
+
+    .cresh-card__title {
+        top: 42px;
+        font-size: 67px;
+        line-height: 38px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 575px) {
+    .cresh-card {
+        height: 95px;
+        width: 298px;
+    }
+
+    .cresh-card__title {
+        top: 18px;
+        font-size: 46px;
+        line-height: 38px;
+    }
 }

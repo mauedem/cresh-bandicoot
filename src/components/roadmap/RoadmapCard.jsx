@@ -1,13 +1,15 @@
 import './RoadmapCard.css'
 
 import RoadmapStars from "../../assets/sections/roadmap/RoadmapCardStars.svg";
+import ArrowLeft from "../../assets/sections/about/ArrowLeft.svg";
+import ArrowRight from "../../assets/sections/about/ArrowRight.svg";
 
-function RoadmapCard({ title, subtitle, content, style}) {
+function RoadmapCard({ title, subtitle, content, style, handleClick}) {
     const contentTexts = content.map((content, idx) => {
         return (
             <div
                 key={idx}
-                className="roadmap-card__content-text"
+                className="roadmap-card__content"
                 style={{ margin: '8px 12px'}}
             >
                 {content}
@@ -21,20 +23,38 @@ function RoadmapCard({ title, subtitle, content, style}) {
 
     return (
         <div className="roadmap-card" style={roadmapCardStyle}>
-            <div className="roadmap-card__subtitle" style={{ marginTop: '16px', marginBottom: '4px' }}>
-                <a name="roadmap">{subtitle}</a>
+            <div className="roadmap-card__subtitle">
+                <div className="roadmap-card__controller">
+                    <button
+                        onClick={() => handleClick(-1)}
+                        className="roadmap-card__btn"
+                        style={{marginRight: 'auto', marginLeft: '8px'}}
+                    >
+                        <img src={ArrowLeft} alt=""/>
+                    </button>
+
+                    <a name="roadmap">{subtitle}</a>
+
+                    <button
+                        onClick={() => handleClick(+1)}
+                        className="roadmap-card__btn"
+                        style={{marginLeft: 'auto', marginRight: '8px'}}
+                    >
+                        <img src={ArrowRight} alt=""/>
+                    </button>
+                </div>
             </div>
 
-            <div className="roadmap-card__title" style={{marginBottom: '14px'}}>
+            <div className="roadmap-card__title">
                 {title}
             </div>
 
-            <div className="roadmap-card__content" style={{marginBottom: '12px'}}>
+            <div>
                 {contentTexts}
             </div>
 
             <img
-                style={{margin: '8px 12px'}}
+                className="roadmap-card__decoration"
                 src={RoadmapStars} alt=""
             />
         </div>

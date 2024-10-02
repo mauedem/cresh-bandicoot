@@ -13,8 +13,10 @@ function BuyCreshCard({ steps }) {
             <img
                 key={step.id}
                 onClick={() => handleClick(idx)}
+                className="step__circle"
                 style={{cursor: "pointer", marginRight: '8px'}}
-                src={currentStep.id === step.id ? FilledCircle : EmptyCircle} alt=""
+                src={currentStep.id === step.id ? FilledCircle : EmptyCircle}
+                alt=""
             />
         )
     })
@@ -25,19 +27,12 @@ function BuyCreshCard({ steps }) {
 
     return (
         <div className="buy-cresh-card">
-            <div style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: 'center',
-                flexDirection: 'column',
-                width: '50%',
-                height: '345px'
-            }}>
+            <div className="buy-cresh-card__wrapper">
                 <div
                     className="buy-cresh-card__title buy-cresh-card__title--red"
                     style={{ marginBottom: '20px' }}
                 >
-                    HOW TO <br/> BUY
+                    HOW TO BUY
                 </div>
                 <div
                     className="buy-cresh-card__title buy-cresh-card__title--blue"
@@ -46,15 +41,12 @@ function BuyCreshCard({ steps }) {
                     <a name="how-to-buy-$cresh">$CRESH</a>
                 </div>
 
-                <button
-                    className="buy-cresh-btn"
-                    style={{ paddingRight: '30px', paddingLeft: '30px' }}
-                >
+                <button className="buy-cresh-card__buy-cresh-btn buy-cresh-btn">
                     BUY $CRESH
                 </button>
             </div>
 
-            <div style={{display: 'flex', flexDirection: 'column', width: '50%'}}>
+            <div className="buy-cresh-card__steps">
                 <div className="step">
                     <div className="step__subtitle">{currentStep.subtitle}</div>
                     <div className="step__title">{currentStep.title}</div>

@@ -10,6 +10,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 999;
 }
 
 .tokenomics-card__title {
@@ -38,4 +39,31 @@
     color: #D71118;
 }
 
+.tokenomics-card__decoration {
+    width: 355px;
+    height: 38px;
+    margin-top: 16px;
+}
 
+@media (min-width: 320px) and (max-width: 767px) {
+    .tokenomics-card {
+        width: 310px;
+        height: 432px;
+        transform: rotate(0deg);
+    }
+
+    .tokenomics-card__title {
+        font-size: 36px;
+        line-height: 28px;
+    }
+
+    .tokenomics-card__content {
+        font-size: 12px;
+        line-height: 17px;
+    }
+
+    .tokenomics-card__decoration {
+        width: 246px;
+        margin-top: 10px;
+    }
+}
