@@ -1,0 +1,54 @@
+.tokenomics {
+    height: 812px;
+    max-width: 1748px;
+    width: 100%;
+    background-image: url(../assets/sections/tokenomics/TokenomicsBg.png);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    scroll-behavior: smooth;
+    scroll-padding-block: 0 !important;
+    scroll-margin-block: 0 !important;
+    scroll-snap-stop: always !important;
+    scroll-snap-type: y mandatory !important;
+
+    scroll-snap-align: start !important;
+
+    z-index: 99;
+}
+
+.tokenomics__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: scroll !important;
+    height: 712px;
+    scroll-snap-align: end !important;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .tokenomics {
+        height: 650px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .tokenomics {
+        height: 550px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .tokenomics {
+        height: 400px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 575px) {
+    .tokenomics {
+        height: 264px;
+        margin-top: 0;
+    }
+}

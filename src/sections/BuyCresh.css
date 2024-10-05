@@ -1,0 +1,102 @@
+.buy-cresh {
+    position: relative;
+    height: 1462px;
+    max-width: 1748px;
+    width: 100%;
+    background-image: url(../assets/sections/buy-cresh/BuyCreshBg.png);
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-color: #16257C;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+
+    scroll-snap-align: start !important;
+}
+
+.buy-cresh__cresh-buying {
+    position: absolute;
+    top: 460px;
+    right: 40%;
+    height: 447px;
+    width: 224px;
+}
+
+.buy-cresh__girl-watching {
+    position: absolute;
+    right: 2%;
+    bottom: 27%;
+    width: 132px;
+    height: 338px;
+}
+
+.buy-cresh__footer {
+    margin-top: auto;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .buy-cresh__cresh-buying {
+        right: 38%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .buy-cresh {
+        height: 1131px;
+    }
+
+    .buy-cresh__cresh-buying {
+        top: 340px;
+        right: 38%;
+        height: 310px;
+        width: 155px;
+    }
+
+    .buy-cresh__girl-watching {
+        display: none;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .buy-cresh {
+        height: 931px;
+    }
+
+    .buy-cresh__cresh-buying {
+        top: 300px;
+        right: 37%;
+        height: 276px;
+        width: 138px;
+    }
+
+    .buy-cresh__girl-watching {
+        display: none;
+    }
+
+    .buy-cresh__footer {
+        display: none;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 575px) {
+    .buy-cresh {
+        height: 731px;
+    }
+
+    .buy-cresh__cresh-buying {
+        height: 276px;
+        width: 138px;
+        top: 186px;
+        right: 30%;
+    }
+
+    .buy-cresh__girl-watching {
+        display: none;
+    }
+
+    .buy-cresh__footer {
+        display: none;
+    }
+}

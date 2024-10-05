@@ -1,0 +1,650 @@
+.about {
+    height: 2159px;
+    width: 100%;
+    max-width: 1748px;
+    scroll-behavior: smooth;
+
+    scroll-padding-block: 0 !important;
+    scroll-margin-block: 0 !important;
+
+    scroll-snap-stop: always !important;
+    scroll-snap-type: y mandatory !important;
+    overflow-y: scroll !important;
+}
+
+.about__1-bg {
+    position: relative;
+    height: 2159px;
+    background-image: url(../assets/sections/about/AboutBg.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    scroll-snap-align: start !important;
+}
+
+.about__2-bg {
+    position: relative;
+    height: 0;
+    width: 100%;
+    background-image: url(../assets/sections/about/AboutBg.png);
+    background-size: 100%;
+    background-position: top -1070px right 0 !important;
+    background-repeat: no-repeat;
+    scroll-snap-align: start !important;
+    bottom: 54.5%;
+}
+
+.about__cresh-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about--fixed {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about__about-content {
+    position: relative;
+}
+
+.about__cresh-card {
+    position: absolute;
+    top: 470px;
+    z-index: 999;
+}
+
+.about__about-card {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 150%);
+    z-index: 100;
+}
+
+.about__origin-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 200%);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    margin-top: 430px;
+}
+
+.about__cresh-bandicoot {
+    position: absolute;
+    top: 8px;
+    z-index: 10;
+    height: 410px;
+    width: 205px;
+}
+
+.about__box {
+    position: relative;
+    top: 402px;
+    left: -31px;
+    width: 183px;
+    height: 182px;
+}
+
+.about__left-palm {
+    position: relative;
+    top: -9%;
+}
+
+.about__right-palm {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+}
+
+.about__flag {
+    position: relative;
+    height: 244px;
+    width: 212px;
+    bottom: 150px;
+    left: calc(49% + 4px);
+    z-index: 99;
+}
+
+.about__girl-flying {
+    position: relative;
+    left: 40px;
+    bottom: -300px;
+    height: 481px;
+    width: 457px;
+}
+
+.about__cresh-riding {
+    position: absolute;
+    bottom: -220px;
+    right: 22%;
+    height: 321px;
+    width: 282px;
+}
+
+.about__treasure {
+    position: absolute;
+    bottom: -320px;
+    right: 64px;
+    height: 263px;
+    width: 221px;
+    z-index: 10;
+}
+
+.about__treasure-shadow {
+    position: absolute;
+    right: 16px;
+    bottom: -420px;
+    height: 263px;
+    width: 221px;
+}
+
+.about__coin-1 {
+    position: absolute;
+    bottom: -348px;
+    right: 23%;
+    height: 47px;
+    width: 67px;
+}
+
+.about__coin-2 {
+    position: absolute;
+    bottom: -550px;
+    right: 26%;
+    height: 66px;
+    width: 104px;
+}
+
+@media (min-width: 1680px) {
+    .about__flag {
+        left:calc(52% + 4px);
+    }
+}
+
+@media (min-width: 1440px) and (max-width: 1600px) {
+    .about__flag {
+        left:calc(49% + 4px);
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+    .about__flag {
+        left: calc(45% + 4px);
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .about {
+        height: 1902px;
+        background-image: url(../assets/sections/about/AboutBg.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        overflow-y: hidden !important;
+    }
+
+    .about__1-bg {
+        position: relative;
+        height: 1902px;
+        background-image: none;
+        overflow: hidden;
+    }
+
+    .about__2-bg {
+        position: relative;
+        height: 1902px;
+        background-image: none;
+        top: -50%;
+    }
+
+    .about__cresh-content {
+        overflow: auto;
+        height: 1902px;
+        margin-top: -68px;
+    }
+
+    .about__cresh-bandicoot {
+        top: 70px;
+    }
+
+    .about__box {
+        top: 464px;
+    }
+
+    .about__cresh-card {
+        top: 536px;
+    }
+
+    .about__about-card {
+        top: 320px;
+    }
+
+    .about__origin-card {
+        margin-top: 0;
+        padding-bottom: 100px;
+        transform: translate(-50%, 155%);
+    }
+
+    .about__left-palm {
+        position: absolute;
+        top: 2%;
+        left: -10%;
+    }
+
+    .about__right-palm {
+        position: absolute;
+        top: 0;
+        left: 70%;
+    }
+
+    .about__flag {
+        position: absolute;
+        width: 174px;
+        top: 486px;
+        left: initial;
+        right: 8%;
+    }
+
+    .about__girl-flying {
+        left: 10px;
+        bottom: -200px;
+        height: 380px;
+        width: 361px;
+    }
+
+    .about__cresh-riding {
+        bottom: -140px;
+        right: 22%;
+        height: 250px;
+        width: 220px;
+    }
+
+    .about__treasure {
+        bottom: -230px;
+        right: 80px;
+        height: 200px;
+        width: 168px;
+    }
+
+    .about__treasure-shadow {
+        height: 238px;
+        width: 200px;
+        bottom: -315px;
+        right: 34px;
+    }
+
+    .about__coin-1 {
+        bottom: -248px;
+    }
+
+    .about__coin-2 {
+        bottom: -440px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .about {
+        height: 1502px;
+        background-image: url(../assets/sections/about/AboutBg.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        overflow-y: hidden !important;
+    }
+
+    .about__1-bg {
+        position: relative;
+        height: 1502px;
+        background-image: none;
+        overflow: hidden;
+    }
+
+    .about__2-bg {
+        position: relative;
+        height: 1502px;
+        background-image: none;
+        top: -42%;
+    }
+
+    .about__cresh-content {
+        overflow: auto;
+        height: 1502px;
+        margin-top: -60px;
+    }
+
+    .about__cresh-card {
+        top: 470px;
+    }
+
+    .about__about-card {
+        top: 320px;
+    }
+
+    .about__origin-card {
+        margin-top: 0;
+        padding-bottom: 100px;
+        transform: translate(-50%, 155%);
+    }
+
+    .about__cresh-bandicoot {
+        height: 350px;
+        width: 175px;
+        top: 70px;
+    }
+
+    .about__box {
+        top: 404px;
+        height: 150px;
+        width: 151px;
+        left: -26px;
+    }
+
+    .about__left-palm {
+        top: -94%;
+        height: 350px;
+        left: -24%;
+    }
+
+    .about__right-palm {
+        position: relative;
+        top: -95%;
+        left: 81%;
+        height: 350px;
+    }
+
+    .about__flag {
+        position: absolute;
+        height: 200px;
+        width: 174px;
+        top: 360px;
+        left: initial;
+        right: 4%;
+    }
+
+    .about__girl-flying {
+        height: 300px;
+        width: 358px;
+        bottom: -20px;
+        left: -20px;
+    }
+
+    .about__cresh-riding {
+        height: 195px;
+        width: 222px;
+        bottom: -2px;
+    }
+
+    .about__treasure {
+        height: 150px;
+        width: 125px;
+        top: 210px;
+        right: 42px;
+    }
+
+    .about__treasure-shadow {
+        height: 52px;
+        width: 145px;
+        top: 312px;
+        right: 8px;
+    }
+
+    .about__coin-1 {
+        bottom: -70px;
+        height: 30px;
+        width: 43px;
+    }
+
+    .about__coin-2 {
+        bottom: -210px;
+        height: 40px;
+        width: 63px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .about {
+        height: 1102px;
+        background-image: url(../assets/sections/about/AboutBg.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        overflow-y: hidden !important;
+    }
+
+    .about__1-bg {
+        position: relative;
+        height: 1102px;
+        background-image: none;
+        overflow: hidden;
+    }
+
+    .about__2-bg {
+        position: relative;
+        height: 1102px;
+        background-image: none;
+        top: -30%;
+    }
+
+    .about__cresh-content {
+        overflow: auto;
+        height: 1102px;
+        margin-top: -60px;
+    }
+
+    .about__cresh-card {
+        top: 410px;
+    }
+
+    .about__about-card {
+        top: 320px;
+    }
+
+    .about__origin-card {
+        margin-top: 0;
+        padding-bottom: 100px;
+        transform: translate(-50%, 155%);
+    }
+
+    .about__cresh-bandicoot {
+        height: 300px;
+        width: 152px;
+        top: 70px;
+    }
+
+    .about__left-palm {
+        top: -94%;
+        height: 305px;
+        left: -30%;
+    }
+
+    .about__right-palm {
+        position: relative;
+        top: -95%;
+        left: 80%;
+        height: 305px;
+    }
+
+    .about__flag {
+        position: absolute;
+        height: 140px;
+        width: 122px;
+        top: 270px;
+        left: initial;
+        right: 4%;
+    }
+
+    .about__box {
+        height: 130px;
+        width: 131px;
+        top: 358px;
+        left: -22px;
+    }
+
+    .about__girl-flying {
+        height: 165px;
+        width: 197px;
+        bottom: 60px;
+        left: 8px;
+    }
+
+    .about__cresh-riding {
+        height: 135px;
+        width: 154px;
+        bottom: 78px;
+    }
+
+    .about__treasure {
+        height: 85px;
+        width: 71px;
+        top: 55px;
+        right: 20px;
+    }
+
+    .about__treasure-shadow {
+        height: 28px;
+        width: 78px;
+        top: 112px;
+        right: 4px;
+    }
+
+    .about__coin-1 {
+        bottom: 30px;
+        height: 30px;
+        width: 43px;
+    }
+
+    .about__coin-2 {
+        bottom: -80px;
+        height: 40px;
+        width: 63px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 575px) {
+    .about {
+        height: 702px;
+        background-image: url(../assets/sections/about/AboutBg.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        overflow-y: hidden !important;
+    }
+
+    .about__1-bg {
+        position: relative;
+        height: 702px;
+        background-image: none;
+        overflow: hidden;
+    }
+
+    .about__2-bg {
+        height: 702px;
+        position: relative;
+        background-image: none;
+        top: -68%;
+    }
+
+    .about__cresh-content {
+        overflow: auto;
+        height: 702px;
+        margin-top: -60px;
+    }
+
+    .about__about-card {
+        margin-top: 20px;
+        top: 0;
+    }
+
+    .about__origin-card {
+        margin-top: 0;
+        padding-bottom: 100px;
+        transform: translate(-50%, 135%);
+    }
+
+    .about__cresh-card {
+        top: 300px;
+    }
+
+    .about__left-palm {
+        top: -94%;
+        height: 205px;
+        left: -34%;
+    }
+
+    .about__right-palm {
+        position: relative;
+        top: -95%;
+        left: 85%;
+        height: 205px;
+    }
+
+    .about__cresh-bandicoot {
+        height: 205px;
+        width: 102px;
+        top: 70px;
+    }
+
+    .about__box {
+        top: 265px;
+        height: 82px;
+        width: 83px;
+        left: -14px;
+    }
+
+    .about__flag {
+        position: absolute;
+        height: 68px;
+        width: 79px;
+        top: 190px;
+        left: initial;
+        right: 4%;
+    }
+
+    .about__about-content {
+        margin-top: 220px;
+    }
+
+    .about__girl-flying {
+        height: 114px;
+        width: 136px;
+        bottom: 0;
+        left: 8px;
+    }
+
+    .about__cresh-riding {
+        height: 104px;
+        width: 91px;
+        bottom: 12px;
+    }
+
+    .about__treasure {
+        height: 85px;
+        width: 71px;
+        top: 55px;
+        right: 20px;
+    }
+
+    .about__treasure-shadow {
+        height: 28px;
+        width: 78px;
+        top: 112px;
+        right: 4px;
+    }
+
+    .about__coin-1 {
+        bottom: -30px;
+        height: 25px;
+        width: 36px;
+    }
+
+    .about__coin-2 {
+        bottom: -94px;
+        height: 33px;
+        width: 52px;
+    }
+}
