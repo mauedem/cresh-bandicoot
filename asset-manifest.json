@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/cresh-bandicoot/static/css/main.955fb807.css",
-    "main.js": "/cresh-bandicoot/static/js/main.88f7ff24.js",
+    "main.css": "/cresh-bandicoot/static/css/main.c1bb771f.css",
+    "main.js": "/cresh-bandicoot/static/js/main.85c25f3d.js",
     "static/js/453.e5d06277.chunk.js": "/cresh-bandicoot/static/js/453.e5d06277.chunk.js",
     "static/media/AboutBg.png": "/cresh-bandicoot/static/media/AboutBg.419726a890f44470e55b.png",
     "static/media/BuyCreshBg.png": "/cresh-bandicoot/static/media/BuyCreshBg.3cfa6c69540faa0f7249.png",
@@ -27,6 +27,7 @@
     "static/media/Coin1.svg": "/cresh-bandicoot/static/media/Coin1.f9878491fe6fa19fa2718dcd2d99ed4b.svg",
     "static/media/StarCardBg.png": "/cresh-bandicoot/static/media/StarCardBg.ad2a097adbc9dac467d8.png",
     "static/media/BuyCreshCardBg.png": "/cresh-bandicoot/static/media/BuyCreshCardBg.4ae34405df480b8ba2c0.png",
+    "static/media/BuyCreshCardMobileBg.png": "/cresh-bandicoot/static/media/BuyCreshCardMobileBg.f571c26423cf935c80c7.png",
     "static/media/Owl.svg": "/cresh-bandicoot/static/media/Owl.e29484005b230d53ee97beed9d698853.svg",
     "static/media/ArrowRight.svg": "/cresh-bandicoot/static/media/ArrowRight.3961b360f58fdafe6bd0c93db34e57a3.svg",
     "static/media/ArrowLeft.svg": "/cresh-bandicoot/static/media/ArrowLeft.15322bf09725fb96f2e937c9d079a620.svg",
@@ -35,17 +36,19 @@
     "static/media/AboutCardStars.svg": "/cresh-bandicoot/static/media/AboutCardStars.31bab3728047c51eeda8e702d7cec6ce.svg",
     "static/media/RoadmapCardStars.svg": "/cresh-bandicoot/static/media/RoadmapCardStars.9d33450e228ae6afc3e9e9604c7ecf09.svg",
     "index.html": "/cresh-bandicoot/index.html",
+    "static/media/MenuOpen.svg": "/cresh-bandicoot/static/media/MenuOpen.98e5fd2287e62b30a5c0465e9fa4bdbd.svg",
     "static/media/Star.svg": "/cresh-bandicoot/static/media/Star.f70fef4054e4ec26a4bbb51c3904dde4.svg",
     "static/media/X.svg": "/cresh-bandicoot/static/media/X.93b8ab88e3482e3ed78a70569c1c3a69.svg",
+    "static/media/MenuClose.svg": "/cresh-bandicoot/static/media/MenuClose.843dc6667fd6afa986c56fa47f719bd8.svg",
     "static/media/TreasureShadow.svg": "/cresh-bandicoot/static/media/TreasureShadow.9cf498e1b517067faafd4066dfe892ee.svg",
     "static/media/EmptyCircle.svg": "/cresh-bandicoot/static/media/EmptyCircle.a8bb83e196f1f67bed48955685dbd10c.svg",
     "static/media/FilledCircle.svg": "/cresh-bandicoot/static/media/FilledCircle.824c62fc5979088bf92a6aed065309e9.svg",
-    "main.955fb807.css.map": "/cresh-bandicoot/static/css/main.955fb807.css.map",
-    "main.88f7ff24.js.map": "/cresh-bandicoot/static/js/main.88f7ff24.js.map",
+    "main.c1bb771f.css.map": "/cresh-bandicoot/static/css/main.c1bb771f.css.map",
+    "main.85c25f3d.js.map": "/cresh-bandicoot/static/js/main.85c25f3d.js.map",
     "453.e5d06277.chunk.js.map": "/cresh-bandicoot/static/js/453.e5d06277.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.955fb807.css",
-    "static/js/main.88f7ff24.js"
+    "static/css/main.c1bb771f.css",
+    "static/js/main.85c25f3d.js"
   ]
 }
