@@ -53,7 +53,8 @@ function Header() {
 
     useEffect(() => {
         const onScroll = () => {
-            const result = window.scrollY + 1 >= document.documentElement.scrollHeight-document.documentElement.clientHeight;
+            const result = window.scrollY + 1 >=
+                document.documentElement.scrollHeight-document.documentElement.clientHeight;
 
             if (result && !isTheEndOfPage) {
                 setIsTheEndOfPage(true);
@@ -93,7 +94,7 @@ function Header() {
             }
 
             {isMenuVisible &&
-                <div className="header__mobile-menu">
+                <div className="header__mobile-menu" style={{ position: 'static' }}>
                     <MobileMenu
                         handleMenuVisible={() => toggleMenuVisible()}
                         linkItems={linkItems}

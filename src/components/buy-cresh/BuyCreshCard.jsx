@@ -38,7 +38,7 @@ function BuyCreshCard({ steps }) {
                     className="buy-cresh-card__title buy-cresh-card__title--blue"
                     style={{ marginBottom: '20px' }}
                 >
-                    <a name="how-to-buy-$cresh">$CRESH</a>
+                    <a id="how-to-buy-$cresh">$CRESH</a>
                 </div>
 
                 <button className="buy-cresh-card__buy-cresh-btn buy-cresh-btn">

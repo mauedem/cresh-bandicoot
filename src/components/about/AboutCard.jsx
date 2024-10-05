@@ -6,7 +6,7 @@ function AboutCard() {
     return (
         <article className="about-card">
             <div className="about-card__title">
-                <a name="about">About</a>
+                About
             </div>
 
             <div className="about-card__subtitle">Who’s Cresh?</div>

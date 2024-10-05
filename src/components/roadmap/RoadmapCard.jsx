@@ -33,7 +33,7 @@ function RoadmapCard({ title, subtitle, content, style, handleClick}) {
                         <img src={ArrowLeft} alt=""/>
                     </button>
 
-                    <a name="roadmap">{subtitle}</a>
+                    {subtitle}
 
                     <button
                         onClick={() => handleClick(+1)}

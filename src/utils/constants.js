@@ -29,13 +29,13 @@ export const LINK_ITEMS = [
     {
         id: 1,
         name: "Tg",
-        href: "https://learn.javascript.ru/",
+        href: "https://t.me/creshtrump",
         src: Tg,
     },
     {
         id: 2,
         name: "X",
-        href: "https://htmlbook.ru/",
+        href: "https://x.com/CreshERC",
         src: X,
     },
     {

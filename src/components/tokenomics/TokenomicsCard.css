@@ -1,5 +1,5 @@
 .tokenomics-card {
-    height: 532px;
+    height: 432px;
     width: 432px;
     border: 5.4px solid #003399;
     border-radius: 20px;
@@ -45,10 +45,16 @@
     margin-top: 16px;
 }
 
+@media (min-width: 320px) and (max-width: 991px) {
+    .tokenomics-card--scrolling-height {
+        height: 800px;
+    }
+}
+
 @media (min-width: 320px) and (max-width: 767px) {
     .tokenomics-card {
         width: 310px;
-        height: 432px;
+        height: 346px;
         transform: rotate(0deg);
     }
 

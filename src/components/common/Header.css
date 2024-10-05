@@ -56,7 +56,11 @@
     border: 3.6px solid #003399;
     background-color: #fff;
     border-radius: 50%;
-    z-index: 999;
+    z-index: 999999;
+}
+
+.header__mobile-menu {
+    overflow: auto;
 }
 
 @media (min-width: 1200px) {
@@ -70,6 +74,10 @@
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
+    .header {
+        padding-top: 44px;
+    }
+
     .header__open-menu-btn {
         height: 60px;
         width: 60px;
@@ -83,27 +91,43 @@
     .header__nav {
         margin-bottom: 30px;
     }
+
+    .header__mobile-menu {
+        margin-top: -94px;
+    }
 }
 
 @media (min-width: 320px) and (max-width: 991px) {
     .header--fixed {
-        position: static !important;
         margin-left: auto;
     }
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
+    .header {
+        padding-top: 34px;
+    }
+
     .buy-cresh-btn {
         height: 50px;
         padding: 2px 2px;
         font-size: 18px;
     }
 
+    .header__mobile-menu {
+        margin-top: -74px;
+    }
 }
 
 @media (min-width: 320px) and (max-width: 1199px) {
     .header {
-        padding: 0
+        padding-left: 0;
+        padding-right: 0;
+        z-index: 9999999;
+    }
+
+    .header__open-menu-btn {
+        position: fixed;
     }
 
     .header__nav-wrapper {

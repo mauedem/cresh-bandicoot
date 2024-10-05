@@ -5,7 +5,7 @@ import './Tokenomics.css'
 function Tokenomics() {
     return (
         <section className="tokenomics">
-            <div style={{display: 'flex', justifyContent: 'center'}}>
+            <div className="tokenomics__content">
                 <TokenomicsCard />
             </div>
         </section>

@@ -75,7 +75,7 @@ function Roadmap() {
                 </div>
             </div>
 
-            <div className="roadmap__cards">
+            <div id="roadmap" className="roadmap__cards">
                 <div className="roadmap__roadmap-cards">{roadmapPhases}</div>
 
                 <div className="roadmap__roadmap-card">

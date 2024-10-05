@@ -4,29 +4,10 @@ import Star from "../../assets/sections/common/Star.svg";
 import MenuClose from "../../assets/sections/common/MenuClose.svg";
 import CreshBandicoot from "../../assets/sections/about/CreshBandicoot.svg";
 import Footer from "./Footer";
-import {useEffect, useRef} from "react";
 
 function MobileMenu({ navItems, handleMenuVisible }) {
-    function useOutsideClickHandler(ref) {
-        useEffect(() => {
-            function handleClickOutside(event) {
-                if (ref.current && !ref.current.contains(event.target)) {
-                    handleMenuVisible();
-                }
-            }
-
-            document.addEventListener("mousedown", handleClickOutside);
-            return () => {
-                document.removeEventListener("mousedown", handleClickOutside);
-            };
-        }, [ref]);
-    }
-
-    const mobileMenuRef = useRef(null);
-    useOutsideClickHandler(mobileMenuRef);
-
     return (
-        <div className="mobile-menu" ref={mobileMenuRef}>
+        <div className="mobile-menu">
             <button
                 className="mobile-menu__close-menu-btn"
                 onClick={handleMenuVisible}

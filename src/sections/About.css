@@ -1,22 +1,36 @@
 .about {
+    height: 2159px;
+    width: 100%;
+    max-width: 1748px;
+    scroll-behavior: smooth;
+
+    scroll-padding-block: 0 !important;
+    scroll-margin-block: 0 !important;
+
+    scroll-snap-stop: always !important;
+    scroll-snap-type: y mandatory !important;
+    overflow-y: scroll !important;
+}
+
+.about__1-bg {
     position: relative;
     height: 2159px;
-    max-width: 1748px;
+    background-image: url(../assets/sections/about/AboutBg.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    scroll-snap-align: start !important;
+}
+
+.about__2-bg {
+    position: relative;
+    height: 0;
     width: 100%;
     background-image: url(../assets/sections/about/AboutBg.png);
-    /*background-size: 100% 100%;*/
-
-    /*background-size: cover;*/
-    background-size: 100% 100%;
-    /*background-size: 100%;*/
-
-    /*background-position: 75% 75%;*/
-    background-position: center;
-
-    /*background-position: top;*/
+    background-size: 100%;
+    background-position: top -1070px right 0 !important;
     background-repeat: no-repeat;
-
-    /*background-attachment: fixed;*/
+    scroll-snap-align: start !important;
+    bottom: 54.5%;
 }
 
 .about__cresh-content {
@@ -26,21 +40,42 @@
     align-items: center;
 }
 
+.about--fixed {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .about__about-content {
     position: relative;
-    margin-top: 440px;
+}
+
+.about__cresh-card {
+    position: absolute;
+    top: 470px;
+    z-index: 999;
 }
 
 .about__about-card {
+    position: absolute;
     display: flex;
     justify-content: center;
-    margin-top: -510px;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 150%);
+    z-index: 100;
 }
 
-.about__origin-content {
+.about__origin-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 200%);
+    z-index: 100;
     display: flex;
     justify-content: center;
-    margin-top: 330px;
+    margin-top: 430px;
 }
 
 .about__cresh-bandicoot {
@@ -60,8 +95,8 @@
 }
 
 .about__left-palm {
-    position: absolute;
-    top: 6%;
+    position: relative;
+    top: -9%;
 }
 
 .about__right-palm {
@@ -75,15 +110,9 @@
     position: relative;
     height: 244px;
     width: 212px;
-    top: 280px;
-    left: 77%;
-    z-index: 100;
-}
-
-.about__cresh-card {
-    position: absolute;
-    top: 470px;
-    z-index: 999;
+    bottom: 150px;
+    left: calc(49% + 4px);
+    z-index: 99;
 }
 
 .about__girl-flying {
@@ -135,25 +164,93 @@
     width: 104px;
 }
 
+@media (min-width: 1680px) {
+    .about__flag {
+        left:calc(52% + 4px);
+    }
+}
+
+@media (min-width: 1440px) and (max-width: 1600px) {
+    .about__flag {
+        left:calc(49% + 4px);
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+    .about__flag {
+        left: calc(45% + 4px);
+    }
+}
+
 @media (min-width: 992px) and (max-width: 1199px) {
     .about {
         height: 1902px;
+        background-image: url(../assets/sections/about/AboutBg.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        overflow-y: hidden !important;
+    }
+
+    .about__1-bg {
+        position: relative;
+        height: 1902px;
+        background-image: none;
+        overflow: hidden;
+    }
+
+    .about__2-bg {
+        position: relative;
+        height: 1902px;
+        background-image: none;
+        top: -50%;
+    }
+
+    .about__cresh-content {
+        overflow: auto;
+        height: 1902px;
+        margin-top: -68px;
+    }
+
+    .about__cresh-bandicoot {
+        top: 70px;
+    }
+
+    .about__box {
+        top: 464px;
+    }
+
+    .about__cresh-card {
+        top: 536px;
     }
 
     .about__about-card {
-        margin-top: -520px;
+        top: 320px;
+    }
+
+    .about__origin-card {
+        margin-top: 0;
+        padding-bottom: 100px;
+        transform: translate(-50%, 155%);
     }
 
     .about__left-palm {
+        position: absolute;
+        top: 2%;
         left: -10%;
     }
 
     .about__right-palm {
-        right: -10%;
+        position: absolute;
+        top: 0;
+        left: 70%;
     }
 
     .about__flag {
-        top: 200px;
+        position: absolute;
+        width: 174px;
+        top: 486px;
+        left: initial;
+        right: 8%;
     }
 
     .about__girl-flying {
@@ -196,41 +293,79 @@
 @media (min-width: 768px) and (max-width: 991px) {
     .about {
         height: 1502px;
+        background-image: url(../assets/sections/about/AboutBg.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        overflow-y: hidden !important;
     }
 
-    .about__about-card {
-        margin-top: 80px;
+    .about__1-bg {
+        position: relative;
+        height: 1502px;
+        background-image: none;
+        overflow: hidden;
+    }
+
+    .about__2-bg {
+        position: relative;
+        height: 1502px;
+        background-image: none;
+        top: -42%;
+    }
+
+    .about__cresh-content {
+        overflow: auto;
+        height: 1502px;
+        margin-top: -60px;
     }
 
     .about__cresh-card {
-        top: 402px;
+        top: 470px;
     }
 
-    .about__left-palm {
-        left: -1%;
-        height: 350px;
+    .about__about-card {
+        top: 320px;
     }
 
-    .about__right-palm {
-        right: -1%;
-        height: 350px;
+    .about__origin-card {
+        margin-top: 0;
+        padding-bottom: 100px;
+        transform: translate(-50%, 155%);
     }
 
     .about__cresh-bandicoot {
         height: 350px;
         width: 175px;
+        top: 70px;
     }
 
     .about__box {
-        top: 340px;
+        top: 404px;
         height: 150px;
         width: 151px;
+        left: -26px;
+    }
+
+    .about__left-palm {
+        top: -94%;
+        height: 350px;
+        left: -24%;
+    }
+
+    .about__right-palm {
+        position: relative;
+        top: -95%;
+        left: 81%;
+        height: 350px;
     }
 
     .about__flag {
+        position: absolute;
         height: 200px;
         width: 174px;
-        top: 136px;
+        top: 360px;
+        left: initial;
+        right: 4%;
     }
 
     .about__girl-flying {
@@ -276,41 +411,78 @@
 @media (min-width: 576px) and (max-width: 767px) {
     .about {
         height: 1102px;
+        background-image: url(../assets/sections/about/AboutBg.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        overflow-y: hidden !important;
+    }
+
+    .about__1-bg {
+        position: relative;
+        height: 1102px;
+        background-image: none;
+        overflow: hidden;
+    }
+
+    .about__2-bg {
+        position: relative;
+        height: 1102px;
+        background-image: none;
+        top: -30%;
+    }
+
+    .about__cresh-content {
+        overflow: auto;
+        height: 1102px;
+        margin-top: -60px;
     }
 
     .about__cresh-card {
-        top: 350px;
+        top: 410px;
     }
 
     .about__about-card {
-        margin-top: -50px;
+        top: 320px;
     }
 
-    .about__left-palm {
-        left: -10%;
-        height: 305px;
-    }
-
-    .about__right-palm {
-        right: -10%;
-        height: 305px;
+    .about__origin-card {
+        margin-top: 0;
+        padding-bottom: 100px;
+        transform: translate(-50%, 155%);
     }
 
     .about__cresh-bandicoot {
         height: 300px;
         width: 152px;
+        top: 70px;
+    }
+
+    .about__left-palm {
+        top: -94%;
+        height: 305px;
+        left: -30%;
+    }
+
+    .about__right-palm {
+        position: relative;
+        top: -95%;
+        left: 80%;
+        height: 305px;
     }
 
     .about__flag {
+        position: absolute;
         height: 140px;
         width: 122px;
-        top: 74px;
+        top: 270px;
+        left: initial;
+        right: 4%;
     }
 
     .about__box {
         height: 130px;
         width: 131px;
-        top: 296px;
+        top: 358px;
         left: -22px;
     }
 
@@ -357,42 +529,80 @@
 @media (min-width: 320px) and (max-width: 575px) {
     .about {
         height: 702px;
+        background-image: url(../assets/sections/about/AboutBg.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        overflow-y: hidden !important;
+    }
+
+    .about__1-bg {
+        position: relative;
+        height: 702px;
+        background-image: none;
+        overflow: hidden;
+    }
+
+    .about__2-bg {
+        height: 702px;
+        position: relative;
+        background-image: none;
+        top: -68%;
+    }
+
+    .about__cresh-content {
+        overflow: auto;
+        height: 702px;
+        margin-top: -60px;
     }
 
     .about__about-card {
         margin-top: 20px;
+        top: 0;
+    }
+
+    .about__origin-card {
+        margin-top: 0;
+        padding-bottom: 100px;
+        transform: translate(-50%, 135%);
     }
 
     .about__cresh-card {
-        top: 240px;
+        top: 300px;
     }
 
     .about__left-palm {
-        left: -4%;
+        top: -94%;
         height: 205px;
+        left: -34%;
     }
 
     .about__right-palm {
-        right: -1%;
+        position: relative;
+        top: -95%;
+        left: 85%;
         height: 205px;
     }
 
     .about__cresh-bandicoot {
         height: 205px;
         width: 102px;
+        top: 70px;
     }
 
     .about__box {
-        top: 205px;
+        top: 265px;
         height: 82px;
         width: 83px;
         left: -14px;
     }
 
     .about__flag {
+        position: absolute;
         height: 68px;
         width: 79px;
-        top: 38px;
+        top: 190px;
+        left: initial;
+        right: 4%;
     }
 
     .about__about-content {

@@ -6,6 +6,8 @@
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
+
+    scroll-snap-align: start !important;
 }
 
 .roadmap__phases {
@@ -245,6 +247,8 @@
 
     .roadmap__cards {
         top: 8px;
+        position: relative;
+        z-index: 999;
     }
 
     .roadmap__cresh-counting {
