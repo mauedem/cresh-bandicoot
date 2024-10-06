@@ -40,13 +40,6 @@
     align-items: center;
 }
 
-.about--fixed {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .about__about-content {
     position: relative;
 }
@@ -95,12 +88,12 @@
 }
 
 .about__left-palm {
-    position: relative;
+    position: relative !important;
     top: -9%;
 }
 
 .about__right-palm {
-    position: absolute;
+    position: absolute !important;
     top: 0;
     right: 0;
     z-index: 0;
@@ -234,13 +227,13 @@
     }
 
     .about__left-palm {
-        position: absolute;
+        position: absolute !important;
         top: 2%;
         left: -10%;
     }
 
     .about__right-palm {
-        position: absolute;
+        position: absolute !important;
         top: 0;
         left: 70%;
     }
@@ -353,7 +346,7 @@
     }
 
     .about__right-palm {
-        position: relative;
+        position: relative !important;
         top: -95%;
         left: 81%;
         height: 350px;
@@ -457,6 +450,13 @@
         top: 70px;
     }
 
+    .about__box {
+        height: 130px;
+        width: 131px;
+        top: 358px;
+        left: -22px;
+    }
+
     .about__left-palm {
         top: -94%;
         height: 305px;
@@ -464,7 +464,7 @@
     }
 
     .about__right-palm {
-        position: relative;
+        position: relative !important;
         top: -95%;
         left: 80%;
         height: 305px;
@@ -477,13 +477,6 @@
         top: 270px;
         left: initial;
         right: 4%;
-    }
-
-    .about__box {
-        height: 130px;
-        width: 131px;
-        top: 358px;
-        left: -22px;
     }
 
     .about__girl-flying {
@@ -570,19 +563,6 @@
         top: 300px;
     }
 
-    .about__left-palm {
-        top: -94%;
-        height: 205px;
-        left: -34%;
-    }
-
-    .about__right-palm {
-        position: relative;
-        top: -95%;
-        left: 85%;
-        height: 205px;
-    }
-
     .about__cresh-bandicoot {
         height: 205px;
         width: 102px;
@@ -594,6 +574,19 @@
         height: 82px;
         width: 83px;
         left: -14px;
+    }
+
+    .about__left-palm {
+        top: -94%;
+        height: 205px;
+        left: -34%;
+    }
+
+    .about__right-palm {
+        position: relative !important;
+        top: -95%;
+        left: 85%;
+        height: 205px;
     }
 
     .about__flag {

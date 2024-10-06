@@ -8,8 +8,11 @@ function LinkButton({ linkHref, linkSrc, className }) {
     }
 
     return (
-        <button className={classNames} onClick={handleClick}>
-            <img src={linkSrc} alt="" width="31" height="31" />
+        <button
+            className={classNames}
+            onClick={handleClick}
+        >
+            <img className="link-button__img" src={linkSrc} alt="" />
         </button>
     )
 }

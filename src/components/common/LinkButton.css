@@ -11,6 +11,11 @@
     border: 3.6px solid #D71118
 }
 
+.link-button__img {
+    width: 31px;
+    height: 31px;
+}
+
 @media (min-width: 320px) and (max-width: 767px) {
     .link-button {
         height: 54px;

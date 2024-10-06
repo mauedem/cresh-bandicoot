@@ -50,8 +50,8 @@
 }
 
 .header__open-menu-btn {
-    width: 40px;
-    height: 40px;
+    width: 40px !important;
+    height: 40px !important;
     cursor: pointer;
     border: 3.6px solid #003399;
     background-color: #fff;

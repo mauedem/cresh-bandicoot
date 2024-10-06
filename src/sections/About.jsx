@@ -5,7 +5,7 @@ import OriginCard from "../components/about/OriginCard";
 
 import './About.css'
 
-import CreshBandicoot from "../assets/sections/about/CreshBandicoot.svg"
+import CreshBandicoot from "../assets/sections/about/CreshBandicootPng.png"
 import Box from "../assets/sections/about/Box.svg"
 import RightPalm from "../assets/sections/about/RightPalm.svg"
 import LeftPalm from "../assets/sections/about/LeftPalm.svg"
