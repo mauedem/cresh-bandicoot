@@ -89,11 +89,15 @@
 
 .about__left-palm {
     position: absolute;
+    height: 673px;
+    width: 409px;
     top: 4%;
 }
 
 .about__right-palm {
     position: absolute;
+    height: 685px;
+    width: 366px;
     top: 0;
     right: 0;
     z-index: 0;
@@ -349,12 +353,14 @@
         top: 4%;
         left: -4%;
         height: 350px;
+        width: 212px;
     }
 
     .about__right-palm {
         top: 0;
         right: -4%;
         height: 350px;
+        width: 187px;
     }
 
     .about__flag {
@@ -464,6 +470,7 @@
     .about__left-palm {
         top: 4%;
         height: 305px;
+        width: 185px;
         left: -4%;
     }
 
@@ -471,6 +478,7 @@
         top: 0;
         right: -4%;
         height: 305px;
+        width: 163px;
     }
 
     .about__flag {
@@ -581,6 +589,7 @@
     .about__left-palm {
         top: 4%;
         height: 205px;
+        width: 124px;
         left: -5%;
     }
 
@@ -588,6 +597,7 @@
         top: 0;
         right: -5%;
         height: 205px;
+        width: 109px;
     }
 
     .about__flag {

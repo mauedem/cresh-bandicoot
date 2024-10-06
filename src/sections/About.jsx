@@ -5,10 +5,10 @@ import OriginCard from "../components/about/OriginCard";
 
 import './About.css'
 
-import CreshBandicoot from "../assets/sections/about/CreshBandicootPng.png"
+import CreshBandicoot from "../assets/sections/about/CreshBandicoot.png"
 import Box from "../assets/sections/about/Box.png"
-import RightPalm from "../assets/sections/about/RightPalm.svg"
-import LeftPalm from "../assets/sections/about/LeftPalm.svg"
+import RightPalm from "../assets/sections/about/RightPalm.png"
+import LeftPalm from "../assets/sections/about/LeftPalm.png"
 import Flag from "../assets/sections/about/Flag.svg"
 import GirlFlying from "../assets/sections/about/GirlFlying.png"
 import CreshRiding from "../assets/sections/about/CreshRiding.png"
@@ -49,7 +49,6 @@ function About() {
 
                 <img
                     className="about__right-palm"
-                    height="686px"
                     src={RightPalm}
                     alt=""
                 />
