@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/cresh-bandicoot/static/css/main.72a8c16c.css",
-    "main.js": "/cresh-bandicoot/static/js/main.c0cb58cd.js",
+    "main.css": "/cresh-bandicoot/static/css/main.97514914.css",
+    "main.js": "/cresh-bandicoot/static/js/main.27f7c4d9.js",
     "static/js/453.e5d06277.chunk.js": "/cresh-bandicoot/static/js/453.e5d06277.chunk.js",
     "static/media/AboutBg.png": "/cresh-bandicoot/static/media/AboutBg.419726a890f44470e55b.png",
     "static/media/BuyCreshBg.png": "/cresh-bandicoot/static/media/BuyCreshBg.3cfa6c69540faa0f7249.png",
     "static/media/BagelFatOne-Regular.ttf": "/cresh-bandicoot/static/media/BagelFatOne-Regular.036565a8126d1bf2ae0c.ttf",
     "static/media/RoadmapBg.png": "/cresh-bandicoot/static/media/RoadmapBg.1efa3632dad7d3aa0da7.png",
     "static/media/TokenomicsBg.png": "/cresh-bandicoot/static/media/TokenomicsBg.6dcd11467560b46587a2.png",
+    "static/media/LeftPalm.png": "/cresh-bandicoot/static/media/LeftPalm.cc7220980abe7cd8dcf3.png",
     "static/media/GirlFlying.png": "/cresh-bandicoot/static/media/GirlFlying.8db97511fe2c6c042a25.png",
-    "static/media/LeftPalm.svg": "/cresh-bandicoot/static/media/LeftPalm.8a3162fcbf5dbf8a63b03dd25966c8be.svg",
-    "static/media/RightPalm.svg": "/cresh-bandicoot/static/media/RightPalm.46b2613a5633f3699155f4aec2abf849.svg",
+    "static/media/RightPalm.png": "/cresh-bandicoot/static/media/RightPalm.30e435335764ced875e2.png",
     "static/media/CreshBuying.png": "/cresh-bandicoot/static/media/CreshBuying.757601c21f04f9749320.png",
     "static/media/CreshRiding.png": "/cresh-bandicoot/static/media/CreshRiding.19d4c6f4d52044c5f2ea.png",
-    "static/media/CreshBandicootPng.png": "/cresh-bandicoot/static/media/CreshBandicootPng.05058cee5aa14aee6cb3.png",
+    "static/media/CreshBandicoot.png": "/cresh-bandicoot/static/media/CreshBandicoot.05058cee5aa14aee6cb3.png",
     "static/media/Mask.svg": "/cresh-bandicoot/static/media/Mask.53b69d3d709befe8d1e815e355517a83.svg",
     "static/media/Treasure.png": "/cresh-bandicoot/static/media/Treasure.750324207928bd0f4c1b.png",
     "static/media/CreshCounting.png": "/cresh-bandicoot/static/media/CreshCounting.ee2b3ecf04c617af7413.png",
@@ -43,12 +43,12 @@
     "static/media/TreasureShadow.svg": "/cresh-bandicoot/static/media/TreasureShadow.9cf498e1b517067faafd4066dfe892ee.svg",
     "static/media/EmptyCircle.svg": "/cresh-bandicoot/static/media/EmptyCircle.a8bb83e196f1f67bed48955685dbd10c.svg",
     "static/media/FilledCircle.svg": "/cresh-bandicoot/static/media/FilledCircle.824c62fc5979088bf92a6aed065309e9.svg",
-    "main.72a8c16c.css.map": "/cresh-bandicoot/static/css/main.72a8c16c.css.map",
-    "main.c0cb58cd.js.map": "/cresh-bandicoot/static/js/main.c0cb58cd.js.map",
+    "main.97514914.css.map": "/cresh-bandicoot/static/css/main.97514914.css.map",
+    "main.27f7c4d9.js.map": "/cresh-bandicoot/static/js/main.27f7c4d9.js.map",
     "453.e5d06277.chunk.js.map": "/cresh-bandicoot/static/js/453.e5d06277.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.72a8c16c.css",
-    "static/js/main.c0cb58cd.js"
+    "static/css/main.97514914.css",
+    "static/js/main.27f7c4d9.js"
   ]
 }
