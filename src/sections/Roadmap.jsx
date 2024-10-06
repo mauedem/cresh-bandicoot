@@ -6,7 +6,7 @@ import './Roadmap.css'
 
 import {useState} from "react";
 
-import Mask from "../assets/sections/roadmap/Mask.png";
+import Mask from "../assets/sections/roadmap/Mask.svg";
 import CreshCounting from "../assets/sections/roadmap/CreshCounting.png";
 import Island1 from "../assets/sections/roadmap/Island1.png";
 import Island2 from "../assets/sections/roadmap/Island2.png";

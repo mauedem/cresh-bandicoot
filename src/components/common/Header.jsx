@@ -1,8 +1,8 @@
 import NavButton from "./NavButton";
-import LinkButton from "./LinkButton";
 import MobileMenu from "./MobileMenu";
 
 import './Header.css'
+import './LinkButton.css'
 
 import {LINK_ITEMS, NAV_ITEMS} from "../../utils/constants";
 import {useEffect, useState} from "react";
@@ -37,20 +37,6 @@ function Header() {
         }
     );
 
-    const linkItems = LINK_ITEMS.map(
-        item => {
-            return (
-                <LinkButton
-                    className="nav-btn"
-                    key={item.id}
-                    linkName={item.name}
-                    linkSrc={item.src}
-                    linkHref={item.href}
-                />
-            )
-        }
-    );
-
     useEffect(() => {
         const onScroll = () => {
             const result = window.scrollY + 1 >=
@@ -71,6 +57,10 @@ function Header() {
 
     function toggleMenuVisible() {
         setIsMenuVisible(!isMenuVisible);
+    }
+
+    function handleClick(linkHref) {
+        window.open(linkHref, '_blank');
     }
 
     return (
@@ -97,14 +87,34 @@ function Header() {
                 <div className="header__mobile-menu" style={{ position: 'static' }}>
                     <MobileMenu
                         handleMenuVisible={() => toggleMenuVisible()}
-                        linkItems={linkItems}
                         navItems={navItems}
                     />
                 </div>
             }
 
             <div className={!isTheEndOfPage ? 'header--fixed' : 'header--static'}>
-                <div className="header__links">{linkItems}</div>
+                <div className="header__links">
+                    <button
+                        className="nav-btn link-button"
+                        onClick={() => handleClick(LINK_ITEMS[0].href)}
+                    >
+                        <img className="link-button--tg" src={LINK_ITEMS[0].src} alt=""/>
+                    </button>
+
+                    <button
+                        className="nav-btn link-button"
+                        onClick={() => handleClick(LINK_ITEMS[1].href)}
+                    >
+                        <img className="link-button--tg" src={LINK_ITEMS[1].src} alt=""/>
+                    </button>
+
+                    <button
+                        className="nav-btn link-button"
+                        onClick={() => handleClick(LINK_ITEMS[2].href)}
+                    >
+                        <img className="link-button--owl" src={LINK_ITEMS[2].src} alt=""/>
+                    </button>
+                </div>
 
                 {!isMenuVisible &&
                     <button className="buy-cresh-btn">

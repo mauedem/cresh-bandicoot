@@ -363,14 +363,14 @@
 
     .about__girl-flying {
         height: 300px;
-        width: 358px;
+        width: 290px;
         bottom: -20px;
-        left: -20px;
+        left: 20px;
     }
 
     .about__cresh-riding {
         height: 195px;
-        width: 222px;
+        width: 192px;
         bottom: -2px;
     }
 
@@ -481,14 +481,14 @@
 
     .about__girl-flying {
         height: 165px;
-        width: 197px;
+        width: 165px;
         bottom: 60px;
-        left: 8px;
+        left: 38px;
     }
 
     .about__cresh-riding {
         height: 135px;
-        width: 154px;
+        width: 124px;
         bottom: 78px;
     }
 
@@ -603,16 +603,16 @@
     }
 
     .about__girl-flying {
-        height: 114px;
-        width: 136px;
-        bottom: 0;
-        left: 8px;
+        height: 153px;
+        width: 148px;
+        bottom: 30px;
+        left: 1%;
     }
 
     .about__cresh-riding {
         height: 104px;
         width: 91px;
-        bottom: 12px;
+        bottom: 52px;
     }
 
     .about__treasure {
@@ -630,13 +630,13 @@
     }
 
     .about__coin-1 {
-        bottom: -30px;
+        bottom: 10px;
         height: 25px;
         width: 36px;
     }
 
     .about__coin-2 {
-        bottom: -94px;
+        bottom: -54px;
         height: 33px;
         width: 52px;
     }

@@ -50,6 +50,9 @@
 }
 
 .header__open-menu-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 40px !important;
     height: 40px !important;
     cursor: pointer;
@@ -61,6 +64,11 @@
 
 .header__mobile-menu {
     overflow: auto;
+}
+
+.header__open-menu-img {
+    height: 30px;
+    width: 30px;
 }
 
 @media (min-width: 1200px) {
@@ -81,11 +89,6 @@
     .header__open-menu-btn {
         height: 60px !important;
         width: 60px !important;
-    }
-
-    .header__open-menu-img {
-        height: 30px !important;
-        width: 30px !important;
     }
 
     .header__nav {
@@ -112,6 +115,11 @@
         height: 50px;
         padding: 2px 2px;
         font-size: 18px;
+    }
+
+    .header__open-menu-img {
+        height: 20px;
+        width: 20px;
     }
 
     .header__mobile-menu {

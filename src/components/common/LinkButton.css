@@ -11,14 +11,39 @@
     border: 3.6px solid #D71118
 }
 
-.link-button__img {
-    width: 31px !important;
-    height: 31px !important;
+.link-button--tg {
+    width: 29px;
+    height: 24px;
+}
+
+.link-button--x {
+    height: 22px;
+    width: 22px;
+}
+
+.link-button--owl {
+    height: 31px;
+    width: 25px;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
     .link-button {
         height: 54px !important;
         width: 54px !important;
+    }
+
+    .link-button--tg {
+        width: 27px;
+        height: 23px;
+    }
+
+    .link-button--x {
+        width: 21px;
+        height: 21px;
+    }
+
+    .link-button--owl {
+        width: 23px;
+        height: 29px;
     }
 }

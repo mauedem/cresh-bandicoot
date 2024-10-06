@@ -5,6 +5,11 @@
     margin-bottom: 30px;
 }
 
+.footer__links {
+    display: flex;
+    align-items: center;
+}
+
 .footer__text {
     font-family: "Bagel Fat One", sans-serif;
     color: #fff;
