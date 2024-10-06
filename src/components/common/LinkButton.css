@@ -1,0 +1,24 @@
+.link-button {
+    border: 3.6px solid #003399;
+    background-color: #fff;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+}
+
+.link-button:hover {
+    border: 3.6px solid #D71118
+}
+
+.link-button__img {
+    width: 31px;
+    height: 31px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .link-button {
+        height: 54px;
+        width: 54px;
+    }
+}

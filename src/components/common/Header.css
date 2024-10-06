@@ -1,0 +1,151 @@
+.header {
+    display: flex;
+    align-items: center;
+    padding: 24px 10px;
+}
+
+.header--fixed {
+    display: flex;
+    position: fixed !important;
+    right: 1%;
+    z-index: 9999;
+}
+
+.header--static {
+    display: flex;
+    position: static !important;
+    margin-left: auto;
+}
+
+.header__links {
+    margin-left: auto;
+}
+
+.nav-btn {
+    margin-right: 10px;
+}
+
+.buy-cresh-btn {
+    font-family: "Bagel Fat One", sans-serif;
+    color: #fff;
+    background-color: #D71118;
+    border-radius: 108px;
+    border: 3.6px solid #FFAF8D;
+    padding: 10px 18px;
+    font-size: 27px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 7px 0 0 #003399;
+}
+
+.buy-cresh-btn:hover {
+    background-color: #FF353C;
+    border: 3.6px solid #CCDDFF;
+}
+
+.buy-cresh-btn__img {
+    margin-left: 14px;
+    margin-right: 14px;
+}
+
+.header__open-menu-btn {
+    width: 40px !important;
+    height: 40px !important;
+    cursor: pointer;
+    border: 3.6px solid #003399;
+    background-color: #fff;
+    border-radius: 50%;
+    z-index: 999999;
+}
+
+.header__mobile-menu {
+    overflow: auto;
+}
+
+@media (min-width: 1200px) {
+    .header__open-menu-btn {
+        display: none;
+    }
+
+    .header__mobile-menu {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .header {
+        padding-top: 44px;
+    }
+
+    .header__open-menu-btn {
+        height: 60px;
+        width: 60px;
+    }
+
+    .header__open-menu-img {
+        height: 30px;
+        width: 30px;
+    }
+
+    .header__nav {
+        margin-bottom: 30px;
+    }
+
+    .header__mobile-menu {
+        margin-top: -94px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 991px) {
+    .header--fixed {
+        margin-left: auto;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .header {
+        padding-top: 34px;
+    }
+
+    .buy-cresh-btn {
+        height: 50px;
+        padding: 2px 2px;
+        font-size: 18px;
+    }
+
+    .header__mobile-menu {
+        margin-top: -74px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 1199px) {
+    .header {
+        padding-left: 0;
+        padding-right: 0;
+        z-index: 9999999;
+    }
+
+    .header__open-menu-btn {
+        position: fixed;
+    }
+
+    .header__nav-wrapper {
+        display: none;
+    }
+
+    .header__links {
+        display: none;
+    }
+
+    .header__nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header__links {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
