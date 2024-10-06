@@ -88,23 +88,23 @@
 }
 
 .about__left-palm {
-    position: relative !important;
-    top: -9%;
+    position: absolute;
+    top: 4%;
 }
 
 .about__right-palm {
-    position: absolute !important;
+    position: absolute;
     top: 0;
     right: 0;
     z-index: 0;
 }
 
 .about__flag {
-    position: relative;
+    position: absolute;
     height: 244px;
     width: 212px;
-    bottom: 150px;
-    left: calc(49% + 4px);
+    top: 26%;
+    right: 6%;
     z-index: 99;
 }
 
@@ -159,19 +159,28 @@
 
 @media (min-width: 1680px) {
     .about__flag {
-        left:calc(52% + 4px);
+        right: 10%;
+    }
+
+    .about__cresh-riding {
+        bottom: -210px;
     }
 }
 
 @media (min-width: 1440px) and (max-width: 1600px) {
     .about__flag {
-        left:calc(49% + 4px);
+        right: 8%;
+    }
+
+    .about__cresh-riding {
+        bottom: -210px;
     }
 }
 
 @media (min-width: 1200px) and (max-width: 1439px) {
     .about__flag {
-        left: calc(45% + 4px);
+        right: 7%;
+        /*left: calc(45% + 4px);*/
     }
 }
 
@@ -227,19 +236,16 @@
     }
 
     .about__left-palm {
-        position: absolute !important;
         top: 2%;
         left: -10%;
     }
 
     .about__right-palm {
-        position: absolute !important;
         top: 0;
         left: 70%;
     }
 
     .about__flag {
-        position: absolute;
         width: 174px;
         top: 486px;
         left: initial;
@@ -340,20 +346,18 @@
     }
 
     .about__left-palm {
-        top: -94%;
+        top: 4%;
+        left: -4%;
         height: 350px;
-        left: -24%;
     }
 
     .about__right-palm {
-        position: relative !important;
-        top: -95%;
-        left: 81%;
+        top: 0;
+        right: -4%;
         height: 350px;
     }
 
     .about__flag {
-        position: absolute;
         height: 200px;
         width: 174px;
         top: 360px;
@@ -458,20 +462,18 @@
     }
 
     .about__left-palm {
-        top: -94%;
+        top: 4%;
         height: 305px;
-        left: -30%;
+        left: -4%;
     }
 
     .about__right-palm {
-        position: relative !important;
-        top: -95%;
-        left: 80%;
+        top: 0;
+        right: -4%;
         height: 305px;
     }
 
     .about__flag {
-        position: absolute;
         height: 140px;
         width: 122px;
         top: 270px;
@@ -489,7 +491,7 @@
     .about__cresh-riding {
         height: 135px;
         width: 124px;
-        bottom: 78px;
+        bottom: 84px;
     }
 
     .about__treasure {
@@ -577,25 +579,23 @@
     }
 
     .about__left-palm {
-        top: -94%;
+        top: 4%;
         height: 205px;
-        left: -34%;
+        left: -5%;
     }
 
     .about__right-palm {
-        position: relative !important;
-        top: -95%;
-        left: 85%;
+        top: 0;
+        right: -5%;
         height: 205px;
     }
 
     .about__flag {
-        position: absolute;
         height: 68px;
         width: 79px;
         top: 190px;
         left: initial;
-        right: 4%;
+        right: 5%;
     }
 
     .about__about-content {
@@ -612,7 +612,7 @@
     .about__cresh-riding {
         height: 104px;
         width: 91px;
-        bottom: 52px;
+        bottom: 54px;
     }
 
     .about__treasure {

@@ -15,6 +15,7 @@
     display: flex;
     position: static !important;
     margin-left: auto;
+    margin-top: -54px;
 }
 
 .header__links {

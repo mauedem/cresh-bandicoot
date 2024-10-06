@@ -11,12 +11,12 @@
 }
 
 .mobile-menu__close-menu-btn {
-    width: 40px;
-    height: 40px !important;
-    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 40px;
+    height: 40px !important;
+    padding: 10px;
     cursor: pointer;
     border: 3.6px solid #003399;
     background-color: #fff;
@@ -28,12 +28,6 @@
     z-index: 10;
     height: 161px;
     width: 81px;
-}
-
-.mobile-menu__close-menu-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .mobile-menu__close-menu-img {

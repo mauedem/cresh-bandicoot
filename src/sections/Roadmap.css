@@ -34,8 +34,8 @@
 .roadmap__cresh-counting {
     position: relative;
     left: 30%;
-    bottom: 12px;
-    height: 268px;
+    bottom: 2px;
+    height: 258px;
     width: 209px;
 }
 
@@ -252,9 +252,9 @@
     }
 
     .roadmap__cresh-counting {
-        height: 87px;
+        height: 80px;
         width: 67px;
-        bottom: 2px;
+        bottom: -2px;
         left: 25%;
     }
 
