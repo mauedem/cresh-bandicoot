@@ -2,7 +2,7 @@ import './MobileMenu.css'
 
 import Star from "../../assets/sections/common/Star.svg";
 import MenuClose from "../../assets/sections/common/MenuClose.svg";
-import CreshBandicoot from "../../assets/sections/about/CreshBandicoot.svg";
+import CreshBandicoot from "../../assets/sections/about/CreshBandicootPng.png";
 import Footer from "./Footer";
 
 function MobileMenu({ navItems, handleMenuVisible }) {

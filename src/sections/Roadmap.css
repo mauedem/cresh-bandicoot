@@ -94,7 +94,7 @@
     }
 
     .roadmap__cards {
-        top: 160px;
+        top: 130px;
     }
 
     .roadmap-card {
@@ -118,21 +118,21 @@
     .roadmap__island-1 {
         height: 205px;
         width: 236px;
-        top: -36px;
+        top: -60px;
         left: 14%;
     }
 
     .roadmap__island-2 {
         height: 208px;
         width: 237px;
-        top: 43%;
+        top: -32px;
         left: 36%;
     }
 
     .roadmap__island-3 {
         height: 206px;
         width: 246px;
-        top: -50px;
+        top: -80px;
         right: 20%;
     }
 

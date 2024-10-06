@@ -5,17 +5,17 @@ import OriginCard from "../components/about/OriginCard";
 
 import './About.css'
 
-import CreshBandicoot from "../assets/sections/about/CreshBandicoot.svg"
-import Box from "../assets/sections/about/Box.svg"
+import CreshBandicoot from "../assets/sections/about/CreshBandicootPng.png"
+import Box from "../assets/sections/about/Box.png"
 import RightPalm from "../assets/sections/about/RightPalm.svg"
 import LeftPalm from "../assets/sections/about/LeftPalm.svg"
 import Flag from "../assets/sections/about/Flag.svg"
-import GirlFlying from "../assets/sections/about/GirlFlying.svg"
-import CreshRiding from "../assets/sections/about/CreshRiding.svg"
-import Treasure from "../assets/sections/about/Treasure.svg"
+import GirlFlying from "../assets/sections/about/GirlFlying.png"
+import CreshRiding from "../assets/sections/about/CreshRiding.png"
+import Treasure from "../assets/sections/about/Treasure.png"
 import TreasureShadow from "../assets/sections/about/TreasureShadow.svg"
-import Coin1 from "../assets/sections/about/Coin1.svg"
-import Coin2 from "../assets/sections/about/Coin2.svg"
+import Coin1 from "../assets/sections/about/Coin1.png"
+import Coin2 from "../assets/sections/about/Coin2.png"
 
 function About() {
     return (

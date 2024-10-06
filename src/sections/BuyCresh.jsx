@@ -5,7 +5,7 @@ import {STEPS} from "../utils/constants";
 
 import './BuyCresh.css'
 
-import CreshBuying from "../assets/sections/buy-cresh/CreshBuying.svg"
+import CreshBuying from "../assets/sections/buy-cresh/CreshBuying.png"
 import GirlWatching from "../assets/sections/buy-cresh/GirlWatching.svg"
 
 function BuyCresh(){

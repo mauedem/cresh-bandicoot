@@ -50,8 +50,8 @@
 }
 
 .header__open-menu-btn {
-    width: 40px;
-    height: 40px;
+    width: 40px !important;
+    height: 40px !important;
     cursor: pointer;
     border: 3.6px solid #003399;
     background-color: #fff;
@@ -79,13 +79,13 @@
     }
 
     .header__open-menu-btn {
-        height: 60px;
-        width: 60px;
+        height: 60px !important;
+        width: 60px !important;
     }
 
     .header__open-menu-img {
-        height: 30px;
-        width: 30px;
+        height: 30px !important;
+        width: 30px !important;
     }
 
     .header__nav {

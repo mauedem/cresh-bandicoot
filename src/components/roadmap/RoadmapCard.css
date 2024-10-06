@@ -32,6 +32,7 @@
     border-radius: 20px;
     white-space: pre-line;
     margin-bottom: 12px;
+    padding: 2px 4px;
 }
 
 .roadmap-card__decoration {
