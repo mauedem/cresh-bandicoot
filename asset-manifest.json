@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/cresh-bandicoot/static/css/main.f57215ab.css",
+    "main.css": "/cresh-bandicoot/static/css/main.72a8c16c.css",
     "main.js": "/cresh-bandicoot/static/js/main.c0cb58cd.js",
     "static/js/453.e5d06277.chunk.js": "/cresh-bandicoot/static/js/453.e5d06277.chunk.js",
     "static/media/AboutBg.png": "/cresh-bandicoot/static/media/AboutBg.419726a890f44470e55b.png",
@@ -43,12 +43,12 @@
     "static/media/TreasureShadow.svg": "/cresh-bandicoot/static/media/TreasureShadow.9cf498e1b517067faafd4066dfe892ee.svg",
     "static/media/EmptyCircle.svg": "/cresh-bandicoot/static/media/EmptyCircle.a8bb83e196f1f67bed48955685dbd10c.svg",
     "static/media/FilledCircle.svg": "/cresh-bandicoot/static/media/FilledCircle.824c62fc5979088bf92a6aed065309e9.svg",
-    "main.f57215ab.css.map": "/cresh-bandicoot/static/css/main.f57215ab.css.map",
+    "main.72a8c16c.css.map": "/cresh-bandicoot/static/css/main.72a8c16c.css.map",
     "main.c0cb58cd.js.map": "/cresh-bandicoot/static/js/main.c0cb58cd.js.map",
     "453.e5d06277.chunk.js.map": "/cresh-bandicoot/static/js/453.e5d06277.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f57215ab.css",
+    "static/css/main.72a8c16c.css",
     "static/js/main.c0cb58cd.js"
   ]
 }
