@@ -94,7 +94,7 @@
     }
 
     .roadmap__cards {
-        top: 130px;
+        top: 110px;
     }
 
     .roadmap-card {
@@ -118,21 +118,21 @@
     .roadmap__island-1 {
         height: 205px;
         width: 236px;
-        top: -60px;
+        top: -72px;
         left: 14%;
     }
 
     .roadmap__island-2 {
         height: 208px;
         width: 237px;
-        top: -32px;
+        top: -48px;
         left: 36%;
     }
 
     .roadmap__island-3 {
         height: 206px;
         width: 246px;
-        top: -80px;
+        top: -96px;
         right: 20%;
     }
 
@@ -148,7 +148,7 @@
 
 
     .roadmap__cards {
-        top: 70px;
+        top: 58px;
     }
 
     .roadmap__cresh-counting {
@@ -168,7 +168,7 @@
     .roadmap__island-1 {
         height: 200px;
         width: 230px;
-        top: -130px;
+        top: -144px;
         left: 34%;
     }
 

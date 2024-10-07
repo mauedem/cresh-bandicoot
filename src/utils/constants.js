@@ -6,22 +6,22 @@ export const NAV_ITEMS = [
     {
         id: 1,
         name: "About",
-        href: "#about",
+        href: "about",
     },
     {
         id: 2,
         name: "Tokenomics",
-        href: "#tokenomics",
+        href: "tokenomics",
     },
     {
         id: 3,
         name: "Roadmap",
-        href: "#roadmap",
+        href: "roadmap",
     },
     {
         id: 4,
         name: "How to buy $CRESH",
-        href: "#how-to-buy-$cresh",
+        href: "how-to-buy-$cresh",
     }
 ];
 
