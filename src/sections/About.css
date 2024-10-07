@@ -4,12 +4,11 @@
     max-width: 1748px;
     scroll-behavior: smooth;
 
-    scroll-padding-block: 0 !important;
-    scroll-margin-block: 0 !important;
+    scroll-padding-block: 0;
+    scroll-margin-block: 0;
 
-    scroll-snap-stop: always !important;
-    scroll-snap-type: y mandatory !important;
-    overflow-y: scroll !important;
+    scroll-snap-stop: always;
+    scroll-snap-type: y mandatory;
 }
 
 .about__1-bg {
@@ -18,7 +17,7 @@
     background-image: url(../assets/sections/about/AboutBg.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    scroll-snap-align: start !important;
+    scroll-snap-align: start;
 }
 
 .about__2-bg {
@@ -27,9 +26,9 @@
     width: 100%;
     background-image: url(../assets/sections/about/AboutBg.png);
     background-size: 100%;
-    background-position: top -1070px right 0 !important;
+    background-position: top -1070px right 0;
     background-repeat: no-repeat;
-    scroll-snap-align: start !important;
+    scroll-snap-align: start;
     bottom: 54.5%;
 }
 
@@ -38,6 +37,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 999;
 }
 
 .about__about-content {
@@ -184,7 +184,6 @@
 @media (min-width: 1200px) and (max-width: 1439px) {
     .about__flag {
         right: 7%;
-        /*left: calc(45% + 4px);*/
     }
 }
 
@@ -194,14 +193,12 @@
         background-image: url(../assets/sections/about/AboutBg.png);
         background-size: 100% 100%;
         background-repeat: no-repeat;
-        overflow-y: hidden !important;
     }
 
     .about__1-bg {
         position: relative;
         height: 1902px;
         background-image: none;
-        overflow: hidden;
     }
 
     .about__2-bg {
@@ -299,14 +296,12 @@
         background-image: url(../assets/sections/about/AboutBg.png);
         background-size: 100% 100%;
         background-repeat: no-repeat;
-        overflow-y: hidden !important;
     }
 
     .about__1-bg {
         position: relative;
         height: 1502px;
         background-image: none;
-        overflow: hidden;
     }
 
     .about__2-bg {
@@ -417,14 +412,12 @@
         background-image: url(../assets/sections/about/AboutBg.png);
         background-size: 100% 100%;
         background-repeat: no-repeat;
-        overflow-y: hidden !important;
     }
 
     .about__1-bg {
         position: relative;
         height: 1102px;
         background-image: none;
-        overflow: hidden;
     }
 
     .about__2-bg {
@@ -535,14 +528,12 @@
         background-image: url(../assets/sections/about/AboutBg.png);
         background-size: 100% 100%;
         background-repeat: no-repeat;
-        overflow-y: hidden !important;
     }
 
     .about__1-bg {
         position: relative;
         height: 702px;
         background-image: none;
-        overflow: hidden;
     }
 
     .about__2-bg {
@@ -555,18 +546,20 @@
     .about__cresh-content {
         overflow: auto;
         height: 702px;
+        width: 100%;
         margin-top: -60px;
     }
 
     .about__about-card {
         margin-top: 20px;
         top: 0;
+        transform: translate(-50%, 180%)
     }
 
     .about__origin-card {
         margin-top: 0;
         padding-bottom: 100px;
-        transform: translate(-50%, 135%);
+        transform: translate(-50%, 185%);
     }
 
     .about__cresh-card {

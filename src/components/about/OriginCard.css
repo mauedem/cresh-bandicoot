@@ -2,7 +2,7 @@
     height: 475px;
     width: 432px;
     border: 5.4px solid #003399;
-    background-image: url(../../assets/sections/common/StarCardBg.png) !important;
+    background-image: url(../../assets/sections/common/StarCardBg.png);
     background-color: white;
     background-position: center;
     transform: rotate(-3deg);

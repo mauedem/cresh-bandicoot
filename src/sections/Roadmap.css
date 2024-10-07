@@ -7,7 +7,7 @@
     background-position: center;
     background-repeat: no-repeat;
 
-    scroll-snap-align: start !important;
+    scroll-snap-align: start;
 }
 
 .roadmap__phases {

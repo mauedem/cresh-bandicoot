@@ -8,12 +8,12 @@
     background-repeat: no-repeat;
 
     scroll-behavior: smooth;
-    scroll-padding-block: 0 !important;
-    scroll-margin-block: 0 !important;
-    scroll-snap-stop: always !important;
-    scroll-snap-type: y mandatory !important;
+    scroll-padding-block: 0;
+    scroll-margin-block: 0;
+    scroll-snap-stop: always;
+    scroll-snap-type: y mandatory;
 
-    scroll-snap-align: start !important;
+    scroll-snap-align: start;
 
     z-index: 99;
 }
@@ -23,9 +23,9 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    overflow: scroll !important;
+    overflow: scroll;
     height: 712px;
-    scroll-snap-align: end !important;
+    scroll-snap-align: end;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {

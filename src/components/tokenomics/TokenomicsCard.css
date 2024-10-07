@@ -3,7 +3,7 @@
     width: 432px;
     border: 5.4px solid #003399;
     border-radius: 20px;
-    background-image: url(../../assets/sections/common/StarCardBg.png) !important;
+    background-image: url(../../assets/sections/common/StarCardBg.png);
     background-color: white;
     background-position: center;
     transform: rotate(3deg);
@@ -47,7 +47,7 @@
 
 @media (min-width: 320px) and (max-width: 991px) {
     .tokenomics-card--scrolling-height {
-        height: 800px;
+        /*height: 800px;*/
     }
 }
 

@@ -16,6 +16,16 @@ function Header() {
     const [isMenuVisible, setIsMenuVisible] = useState(false);
 
     function goToHrefName(href) {
+        console.log('goToHrefName href', href)
+
+    // const element = document.getElementById(href);
+    // if (element) {
+    //     element.scrollIntoView({ behavior: 'smooth' }); // Плавная прокрутка к элементу
+    // } else {
+    //     console.warn(`Element with id "${href}" not found.`);
+    // }
+
+
         window.location.hash = href;
 
         setIsMenuVisible(false);

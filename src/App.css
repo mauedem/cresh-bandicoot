@@ -13,8 +13,8 @@ html {
     align-items: center;
     overflow-x: hidden;
 
-    scroll-snap-stop: always !important;
-    scroll-snap-type: y mandatory !important;
+    scroll-snap-stop: always;
+    scroll-snap-type: y mandatory;
 }
 
 .app__footer {

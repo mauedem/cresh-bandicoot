@@ -5,7 +5,7 @@
     height: 345px;
     border: 5.4px solid #003399;
     border-radius: 20px;
-    background-image: url(../../assets/sections/buy-cresh/BuyCreshCardBg.png) !important;
+    background-image: url(../../assets/sections/buy-cresh/BuyCreshCardBg.png);
     background-color: #fff;
     display: flex;
     align-items: center;
@@ -103,7 +103,7 @@
         flex-direction: column;
         height: 373px;
         width: 300px;
-        background-image: url(../../assets/sections/buy-cresh/BuyCreshCardMobileBg.png) !important;
+        background-image: url(../../assets/sections/buy-cresh/BuyCreshCardMobileBg.png);
     }
 
     .buy-cresh-card__wrapper {

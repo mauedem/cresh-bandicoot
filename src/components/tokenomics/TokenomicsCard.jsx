@@ -4,7 +4,7 @@ import AboutCardStars from "../../assets/sections/about/AboutCardStars.svg"
 
 function TokenomicsCard() {
     return (
-        <article className="tokenomics-card">
+        <article className="tokenomics-card" id="tokenomics-card">
             <div className="tokenomics-card__title">
                 <a id="tokenomics">Tokenomics</a>
             </div>
