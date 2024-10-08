@@ -1,0 +1,104 @@
+.roadmap-card {
+    width: 320px;
+    border: 5.4px solid #003399;
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+.roadmap-card__subtitle {
+    font-family: "Bagel Fat One", sans-serif;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 4px;
+}
+
+.roadmap-card__title {
+    font-family: "Bagel Fat One", sans-serif;
+    font-size: 32px;
+    line-height: 25px;
+    color: #D71118;
+    text-align: center;
+    margin-right: 12px;
+    margin-left: 12px;
+    margin-bottom: 14px;
+}
+
+.roadmap-card__content {
+    font-family: "Bagel Fat One", sans-serif;
+    font-size: 16px;
+    text-align: center;
+    background-color: #00339924;
+    border-radius: 20px;
+    white-space: pre-line;
+    margin-bottom: 12px;
+    padding: 2px 4px;
+}
+
+.roadmap-card__decoration {
+    margin: 8px 12px;
+}
+
+.roadmap-card__controller {
+    display: flex;
+    justify-content: center;
+}
+
+.roadmap-card__btn {
+    background-color: #D71118;
+    border-radius: 96px;
+    border: none;
+    width: 65px;
+    height: 31px;
+    cursor: pointer;
+}
+
+.roadmap-card__btn:hover {
+    background-color: #003399;
+}
+
+@media (min-width: 1200px) {
+    .roadmap-card__btn {
+        display: none;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .roadmap-card__btn {
+        display: none;
+    }
+
+    .roadmap-card {
+        transform: rotate(0deg) !important;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .roadmap-card {
+        width: 300px;
+    }
+
+    .roadmap-card__title {
+        font-size: 24px;
+        line-height: 19px;
+    }
+
+    .roadmap-card__subtitle {
+        font-size: 13px;
+        line-height: 10px;
+    }
+
+    .roadmap-card__content {
+        font-size: 12px;
+        line-height: 17px;
+    }
+
+    .roadmap-card__decoration {
+        width: 268px;
+    }
+
+    .roadmap-card__btn {
+        height: 24px;
+        width: 50px;
+    }
+}
