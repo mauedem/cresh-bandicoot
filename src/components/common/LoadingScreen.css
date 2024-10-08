@@ -1,0 +1,59 @@
+.loading-screen {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #16257C;
+    overflow: hidden;
+}
+
+.loading-screen__cresh-trump {
+    height: 364px;
+    width: 306px;
+    margin-top: -8%;
+    margin-bottom: 50px;
+}
+
+.loading-screen__title {
+    font-family: "Bagel Fat One", sans-serif;
+    font-size: 95px;
+    line-height: 76px;
+    color: #FFFFFF;
+    margin-bottom: 50px;
+}
+
+.loading-screen__progress {
+    font-family: "Bagel Fat One", sans-serif;
+    font-size: 74px;
+    line-height: 59px;
+    color: #D71118;
+    transform: rotate(-5deg);
+}
+
+.loading-screen__vote-paper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+@media (min-width: 320px) and (max-width: 991px) {
+    .loading-screen__cresh-trump {
+        height: 270px;
+        width: 227px;
+        margin-bottom: 20px;
+    }
+
+    .loading-screen__title {
+        font-size: 46px;
+        margin-bottom: 20px;
+    }
+
+    .loading-screen__progress {
+        font-size: 44px;
+    }
+}
