@@ -40,6 +40,10 @@ function App() {
         return () => clearInterval(interval);
     }, []);
 
+    // const scrollToRef = (ref) => {
+    //     ref.current?.scrollIntoView({behavior: "smooth", block: "start"});
+    // };
+
     return (
         <div className="App">
             {loading ? (

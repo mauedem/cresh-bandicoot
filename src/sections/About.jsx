@@ -3,9 +3,9 @@ import CreshCard from "../components/about/CreshCard";
 import AboutCard from "../components/about/AboutCard";
 import OriginCard from "../components/about/OriginCard";
 
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 
-import { motion } from 'framer-motion';
+import {motion, useScroll, useTransform} from 'framer-motion';
 
 import './About.css'
 
@@ -28,6 +28,8 @@ import Coin2 from "../assets/sections/about/Coin2.png"
 function About() {
     const [currentFire, setCurrentFire] = useState(0);
     const [creshSpinning, setCreshSpinning] = useState(false);
+
+    const ref = useRef(null);
 
     const fireImages = [
         Fire2,
@@ -85,7 +87,7 @@ function About() {
             <div id="section-1" className="about__1-bg">
                 <Header/>
 
-                <div className="about__cresh-content">
+                <div ref={ref} className="about__cresh-content">
                     <motion.div
                         className="about__cresh-bandicoot"
                         style={{display: 'inline-block', transformOrigin: 'center center'}}

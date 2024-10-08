@@ -1,13 +1,14 @@
 import './AboutCard.css'
 
 import AboutCardStars from "../../assets/sections/about/AboutCardStars.svg"
-// import { motion } from 'framer-motion';
+// import {motion, useAnimation} from 'framer-motion';
+// import {useEffect, useState} from "react";
 
 function AboutCard() {
     /* TODO доработать скролл */
     // const controls = useAnimation();
     // const [isVisible, setIsVisible] = useState(false);
-
+    //
     // useEffect(() => {
     //     const handleScroll = () => {
     //         const scrollPosition = window.scrollY;
@@ -28,7 +29,7 @@ function AboutCard() {
     //         window.removeEventListener('scroll', handleScroll);
     //     };
     // }, []);
-
+    //
     // useEffect(() => {
     //     if (isVisible) {
     //         controls.start({y: 0});

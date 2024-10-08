@@ -3,7 +3,7 @@ import Footer from "../components/common/Footer";
 
 import confetti from 'canvas-confetti';
 
-import { useEffect } from 'react';
+import {useEffect, useRef} from 'react';
 
 import {STEPS} from "../utils/constants";
 
@@ -14,6 +14,8 @@ import AngryKamila from "../assets/sections/buy-cresh/AngryKamila.gif"
 import CreshAndBall from "../assets/sections/roadmap/CreshAndBall.gif";
 
 function BuyCresh(){
+    const ref = useRef(null);
+
     const scalar = 2;
     const unicorn = confetti.shapeFromText({text: '🍋', scalar});
 
@@ -60,7 +62,7 @@ function BuyCresh(){
     }, []);
 
     return (
-        <section className="buy-cresh">
+        <section ref={ref} className="buy-cresh">
             <BuyCreshCard steps={STEPS}/>
 
             <img

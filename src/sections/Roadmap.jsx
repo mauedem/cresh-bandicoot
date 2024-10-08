@@ -4,7 +4,7 @@ import {PHASES} from "../utils/constants";
 
 import { motion } from 'framer-motion';
 
-import {useState} from "react";
+import {useRef, useState} from "react";
 
 import './Roadmap.css'
 
@@ -21,6 +21,8 @@ import Island3 from "../assets/sections/roadmap/Island3.png";
 function Roadmap() {
     const [currentPhase, setCurrentPhase] = useState(PHASES[0]);
     const [islandFloating, setIslandFloating] = useState(false);
+
+    const ref = useRef(null);
 
     // Функция для получения значений translateY в зависимости от ширины экрана
     const getCreshCountingValues = () => {
@@ -99,7 +101,7 @@ function Roadmap() {
     }
 
     return (
-        <section className="roadmap">
+        <section ref={ref} className="roadmap">
             <img
                 className="roadmap__table"
                 src={Table}

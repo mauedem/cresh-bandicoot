@@ -3,8 +3,11 @@ import TokenomicsCard from "../components/tokenomics/TokenomicsCard";
 import './Tokenomics.css'
 
 import VotePaper from "../assets/sections/common/VotePaper.gif";
+import {useRef} from "react";
 
 function Tokenomics() {
+    const ref = useRef(null);
+
     /* TODO доработать скролл */
     // useEffect(() => {
     //     const onScroll = () => {
@@ -34,7 +37,7 @@ function Tokenomics() {
 
 
     return (
-        <section className="tokenomics">
+        <section ref={ref} className="tokenomics">
             <img
                 className="tokenomics__vote-paper"
                 src={VotePaper}
