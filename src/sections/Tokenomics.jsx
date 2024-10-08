@@ -42,7 +42,7 @@ function Tokenomics() {
             />
 
             <div className="tokenomics__content">
-                {/*<TokenomicsCard />*/}
+                <TokenomicsCard />
             </div>
         </section>
     )

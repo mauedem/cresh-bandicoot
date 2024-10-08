@@ -151,7 +151,7 @@ function About() {
                         duration: 500,
                         ease: 'linear',
                         repeat: Infinity,
-                        repeatType: 'loop',
+                        delay: -0.9,
                         repeatDelay: 0,
                     }}
                 >

@@ -15,29 +15,21 @@ function App() {
     const [progress, setProgress] = useState(0);
 
     useEffect(() => {
-        const handleLoad = () => {
-            // Убедимся, что загрузка занимает не менее 2 секунд
-            let minLoadingTime = setTimeout(() => {
-                /* TODO вернуть загрузочный раскомментить */
-                setLoading(false);
-            }, 2000);
+        // Эмуляция загрузки
+        const loadResource = async () => {
+            // Эмуляция ожидания 2 секунд
+            await new Promise((resolve) => setTimeout(resolve, 2000));
 
-            return () => clearTimeout(minLoadingTime);
+            setLoading(false);
         };
 
-        window.addEventListener('load', handleLoad);
-
-        return () => {
-            window.removeEventListener('load', handleLoad);
-        };
+        loadResource();
     }, []);
 
-    // Эмуляция прогресса загрузки
     useEffect(() => {
         const interval = setInterval(() => {
             setProgress((prev) => {
                 if (prev >= 100) {
-                    // Остановить, если прогресс уже завершен
                     clearInterval(interval);
                     return 100;
                 }
@@ -47,29 +39,6 @@ function App() {
 
         return () => clearInterval(interval);
     }, []);
-
-    // const sections = ['section-1', 'section-2', 'section-3'];
-
-    // useEffect(() => {
-    //     const handleScroll = (event) => {
-    //         event.preventDefault();
-    //         const delta = Math.sign(event.deltaY);
-    //         const nextSection =
-    //             delta > 0 ? document.querySelector(
-    //                 `#${sections[1]}`) : document.querySelector(`#${sections[0]}`
-    //             );
-    //
-    //         if (nextSection) {
-    //             nextSection.scrollIntoView({behavior: 'smooth'});
-    //         }
-    //     };
-    //
-    //   window.addEventListener('wheel', handleScroll, { passive: false });
-    //
-    //   return () => {
-    //     window.removeEventListener('wheel', handleScroll);
-    //   };
-    // }, []);
 
     return (
         <div className="App">
