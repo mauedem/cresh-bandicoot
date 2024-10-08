@@ -2,9 +2,10 @@ import TokenomicsCard from "../components/tokenomics/TokenomicsCard";
 
 import './Tokenomics.css'
 
-import {useEffect} from "react";
+import VotePaper from "../assets/sections/common/VotePaper.gif";
 
 function Tokenomics() {
+    /* TODO доработать скролл */
     // useEffect(() => {
     //     const onScroll = () => {
     //         let card = document.getElementById('tokenomics-card');
@@ -34,8 +35,14 @@ function Tokenomics() {
 
     return (
         <section className="tokenomics">
+            <img
+                className="tokenomics__vote-paper"
+                src={VotePaper}
+                alt="Vote paper"
+            />
+
             <div className="tokenomics__content">
-                <TokenomicsCard />
+                {/*<TokenomicsCard />*/}
             </div>
         </section>
     )

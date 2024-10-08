@@ -67,6 +67,10 @@
     .roadmap-card__btn {
         display: none;
     }
+
+    .roadmap-card {
+        transform: rotate(0deg) !important;
+    }
 }
 
 @media (min-width: 320px) and (max-width: 767px) {

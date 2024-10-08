@@ -8,6 +8,7 @@ export const NAV_ITEMS = [
         name: "About",
         href: "about",
     },
+    /* TODO check route */
     {
         id: 2,
         name: "Tokenomics",
@@ -38,10 +39,11 @@ export const LINK_ITEMS = [
         href: "https://x.com/CreshERC",
         src: X,
     },
+    /* TODO добавить актуальную ссылку */
     {
         id: 3,
         name: "Owl",
-        href: "https://react.dev/",
+        href: "",
         src: Owl,
     },
 ];
