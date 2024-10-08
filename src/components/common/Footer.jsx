@@ -15,21 +15,21 @@ function Footer() {
                     className="nav-btn link-button"
                     onClick={() => handleClick(LINK_ITEMS[0].href)}
                 >
-                    <img className="link-button--tg" src={LINK_ITEMS[0].src} alt=""/>
+                    <img className="link-button--tg" src={LINK_ITEMS[0].src} alt="Tg" />
                 </button>
 
                 <button
                     className="nav-btn link-button"
                     onClick={() => handleClick(LINK_ITEMS[1].href)}
                 >
-                    <img className="link-button--tg" src={LINK_ITEMS[1].src} alt=""/>
+                    <img className="link-button--x" src={LINK_ITEMS[1].src} alt="X" />
                 </button>
 
                 <button
                     className="nav-btn link-button"
                     onClick={() => handleClick(LINK_ITEMS[2].href)}
                 >
-                    <img className="link-button--owl" src={LINK_ITEMS[2].src} alt=""/>
+                    <img className="link-button--owl" src={LINK_ITEMS[2].src} alt="" />
                 </button>
             </div>
 

@@ -1,11 +1,11 @@
 import NavButton from "./NavButton";
 import MobileMenu from "./MobileMenu";
 
-import './Header.css'
-import './LinkButton.css'
-
 import {LINK_ITEMS, NAV_ITEMS} from "../../utils/constants";
 import {useEffect, useState} from "react";
+
+import './Header.css'
+import './LinkButton.css'
 
 import Star from "../../assets/sections/common/Star.svg"
 import MenuOpen from "../../assets/sections/common/MenuOpen.svg"
@@ -15,6 +15,7 @@ function Header() {
     const [isTheEndOfPage, setIsTheEndOfPage] = useState(false);
     const [isMenuVisible, setIsMenuVisible] = useState(false);
 
+    /* TODO поправить переход к Tokenomics */
     function goToHrefName(href) {
         document.getElementById(href).scrollIntoView({ behavior: 'smooth' });
 
@@ -80,13 +81,16 @@ function Header() {
                     <img
                         className="header__open-menu-img"
                         src={MenuOpen}
-                        alt=""
+                        alt="Open menu"
                     />
                 </button>
             }
 
             {isMenuVisible &&
-                <div className="header__mobile-menu" style={{ position: 'static' }}>
+                <div
+                    className="header__mobile-menu"
+                    style={{ position: 'static' }}
+                >
                     <MobileMenu
                         handleMenuVisible={() => toggleMenuVisible()}
                         navItems={navItems}
@@ -100,29 +104,49 @@ function Header() {
                         className="nav-btn link-button"
                         onClick={() => handleClick(LINK_ITEMS[0].href)}
                     >
-                        <img className="link-button--tg" src={LINK_ITEMS[0].src} alt=""/>
+                        <img
+                            className="link-button--tg"
+                            src={LINK_ITEMS[0].src}
+                            alt="Tg"
+                        />
                     </button>
 
                     <button
                         className="nav-btn link-button"
                         onClick={() => handleClick(LINK_ITEMS[1].href)}
                     >
-                        <img className="link-button--tg" src={LINK_ITEMS[1].src} alt=""/>
+                        <img
+                            className="link-button--x"
+                            src={LINK_ITEMS[1].src}
+                            alt="X"
+                        />
                     </button>
 
                     <button
                         className="nav-btn link-button"
                         onClick={() => handleClick(LINK_ITEMS[2].href)}
                     >
-                        <img className="link-button--owl" src={LINK_ITEMS[2].src} alt=""/>
+                        <img
+                            className="link-button--owl"
+                            src={LINK_ITEMS[2].src}
+                            alt=""
+                        />
                     </button>
                 </div>
 
                 {!isMenuVisible &&
                     <button className="buy-cresh-btn">
-                        <img className="buy-cresh-btn__img" src={Star} alt=""/>
+                        <img
+                            className="buy-cresh-btn__img"
+                            src={Star}
+                            alt="Star"
+                        />
                         BUY $CRESH
-                        <img className="buy-cresh-btn__img" src={Star} alt=""/>
+                        <img
+                            className="buy-cresh-btn__img"
+                            src={Star}
+                            alt="Star"
+                        />
                     </button>
                 }
             </div>

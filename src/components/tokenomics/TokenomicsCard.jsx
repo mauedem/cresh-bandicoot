@@ -4,7 +4,10 @@ import AboutCardStars from "../../assets/sections/about/AboutCardStars.svg"
 
 function TokenomicsCard() {
     return (
-        <article className="tokenomics-card" id="tokenomics-card">
+        <article
+            id="tokenomics-card"
+            className="tokenomics-card"
+        >
             <div className="tokenomics-card__title">
                 <a id="tokenomics">Tokenomics</a>
             </div>
@@ -35,7 +38,8 @@ function TokenomicsCard() {
                 <div className="tokenomics-card--scrolling-height">
                     <img
                         className="tokenomics-card__decoration"
-                        src={AboutCardStars} alt=""
+                        src={AboutCardStars}
+                        alt="Stars"
                     />
                 </div>
             </div>

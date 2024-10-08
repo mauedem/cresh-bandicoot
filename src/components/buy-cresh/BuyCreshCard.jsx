@@ -16,7 +16,7 @@ function BuyCreshCard({ steps }) {
                 className="step__circle"
                 style={{cursor: "pointer", marginRight: '8px'}}
                 src={currentStep.id === step.id ? FilledCircle : EmptyCircle}
-                alt=""
+                alt="Circle"
             />
         )
     })

@@ -1,4 +1,5 @@
 .tokenomics {
+    position: relative;
     height: 812px;
     max-width: 1748px;
     width: 100%;
@@ -6,7 +7,9 @@
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
+    z-index: 99;
 
+    /* TODO убрать или доработать */
     scroll-behavior: smooth;
     scroll-padding-block: 0;
     scroll-margin-block: 0;
@@ -14,8 +17,6 @@
     scroll-snap-type: y mandatory;
 
     scroll-snap-align: start;
-
-    z-index: 99;
 }
 
 .tokenomics__content {
@@ -26,6 +27,15 @@
     overflow: scroll;
     height: 712px;
     scroll-snap-align: end;
+}
+
+.tokenomics__vote-paper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {

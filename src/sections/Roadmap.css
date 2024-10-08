@@ -1,4 +1,5 @@
 .roadmap {
+    position: relative;
     height: 1526px;
     max-width: 1748px;
     width: 100%;
@@ -7,6 +8,7 @@
     background-position: center;
     background-repeat: no-repeat;
 
+    /* TODO доработать или убрать */
     scroll-snap-align: start;
 }
 
@@ -16,19 +18,47 @@
 }
 
 .roadmap__cards {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
     top: 208px;
+    z-index: 999;
+}
+
+.roadmap__table {
+    position: absolute;
+    width: 790px;
+    height: 311px;
+    left: 23%;
+    top: 13%;
+    z-index: 98;
 }
 
 .roadmap__mask {
     position: relative;
-    bottom: 6%;
+    bottom: 5%;
     left: 80%;
     height: 191px;
     width: 181px;
+}
+
+.roadmap__box-1 {
+    position: absolute;
+    width: 437px;
+    height: 287px;
+    top: 250px;
+    left: 0;
+    z-index: 99;
+}
+
+.roadmap__box-2 {
+    position: absolute;
+    width: 308px;
+    height: 215px;
+    top: 300px;
+    right: 0;
+    z-index: 99;
 }
 
 .roadmap__cresh-counting {
@@ -39,12 +69,20 @@
     width: 209px;
 }
 
+.roadmap__cresh-bandicoot {
+    position: absolute;
+    height: 90px;
+    left: 46%;
+    z-index: 99;
+}
+
 .roadmap__island-1 {
     position: absolute;
     height: 257px;
     width: 296px;
     top: -36px;
     left: 14%;
+    z-index: 99;
 }
 
 .roadmap__island-2 {
@@ -52,7 +90,7 @@
     height: 261px;
     width: 298px;
     top: 43%;
-    left: 39%;
+    left: 36%;
     z-index: 88;
 }
 
@@ -88,6 +126,12 @@
     display: none;
 }
 
+@media (min-width: 1440px) {
+    .roadmap__cresh-counting {
+        left: 28%;
+    }
+}
+
 @media (min-width: 992px) and (max-width: 1199px) {
     .roadmap {
         height: 1300px;
@@ -101,11 +145,29 @@
         margin-right: 8px;
     }
 
+    .roadmap__table {
+        width: 590px;
+        height: 232px;
+        left: 20%;
+        top: 13%;
+    }
+
     .roadmap__mask {
-        bottom: 6%;
-        left: 79%;
+        bottom: 5%;
+        left: 78%;
         height: 170px;
         width: 161px;
+    }
+
+    .roadmap__box-1 {
+        width: 335px;
+        height: 220px;
+    }
+
+    .roadmap__box-2 {
+        width: 257px;
+        height: 180px;
+        top: 280px;
     }
 
     .roadmap__cresh-counting {
@@ -113,6 +175,11 @@
         bottom: 2px;
         height: 220px;
         width: 172px;
+    }
+
+    .roadmap__cresh-bandicoot {
+        bottom: 2px;
+        left: 46%;
     }
 
     .roadmap__island-1 {
@@ -158,11 +225,30 @@
         left: 26%;
     }
 
+    .roadmap__table {
+        width: 470px;
+        height: 185px;
+        left: 20%;
+        top: 13%;
+    }
+
     .roadmap__mask {
         height: 116px;
         width: 120px;
         left: 79%;
-        bottom: 40px;
+        bottom: 32px;
+    }
+
+    .roadmap__box-1 {
+        width: 289px;
+        height: 190px;
+        top: 200px;
+    }
+
+    .roadmap__box-2 {
+        width: 200px;
+        height: 140px;
+        top: 220px;
     }
 
     .roadmap__island-1 {
@@ -202,14 +288,33 @@
         height: 123px;
         width: 95px;
         bottom: -4px;
-        left: 27%;
+        left: 28%;
+    }
+
+    .roadmap__table {
+        width: 334px;
+        height: 131px;
+        left: 23%;
+        top: 14%;
     }
 
     .roadmap__mask {
         height: 88px;
         width: 84px;
         left: 80%;
-        bottom: 42px;
+        bottom: 32px;
+    }
+
+    .roadmap__box-1 {
+        width: 197px;
+        height: 130px;
+        top: 150px;
+    }
+
+    .roadmap__box-2 {
+        width: 128px;
+        height: 90px;
+        top: 170px;
     }
 
     .roadmap__island-1 {
@@ -247,28 +352,46 @@
 
     .roadmap__cards {
         top: 8px;
-        position: relative;
-        z-index: 999;
     }
 
     .roadmap__cresh-counting {
         height: 80px;
         width: 67px;
         bottom: -2px;
-        left: 25%;
+        left: 29%;
+    }
+
+    .roadmap__table {
+        width: 260px;
+        height: 103px;
+        left: 23%;
+        top: 13%;
     }
 
     .roadmap__mask {
         height: 62px;
         width: 59px;
         left: 79%;
+        bottom: 20px;
+    }
+
+    .roadmap__box-1 {
+        width: 137px;
+        height: 90px;
+        top: 104px;
+    }
+
+    .roadmap__box-2 {
+        width: 94px;
+        height: 66px;
+        top: 110px;
     }
 
     .roadmap__island-1 {
-        height: 151px;
-        width: 174px;
-        top: -146px;
-        left: 26%;
+        height: 100px;
+        width: 115px;
+        top: -90px;
+        left: 34%;
     }
 
     .roadmap__roadmap-cards {

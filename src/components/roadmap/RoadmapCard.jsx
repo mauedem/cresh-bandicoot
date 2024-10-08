@@ -30,7 +30,10 @@ function RoadmapCard({ title, subtitle, content, style, handleClick}) {
                         className="roadmap-card__btn"
                         style={{marginRight: 'auto', marginLeft: '8px'}}
                     >
-                        <img src={ArrowLeft} alt=""/>
+                        <img
+                            src={ArrowLeft}
+                            alt="Left"
+                        />
                     </button>
 
                     {subtitle}
@@ -40,7 +43,10 @@ function RoadmapCard({ title, subtitle, content, style, handleClick}) {
                         className="roadmap-card__btn"
                         style={{marginLeft: 'auto', marginRight: '8px'}}
                     >
-                        <img src={ArrowRight} alt=""/>
+                        <img
+                            src={ArrowRight}
+                            alt="Right"
+                        />
                     </button>
                 </div>
             </div>
@@ -55,7 +61,8 @@ function RoadmapCard({ title, subtitle, content, style, handleClick}) {
 
             <img
                 className="roadmap-card__decoration"
-                src={RoadmapStars} alt=""
+                src={RoadmapStars}
+                alt="Stars"
             />
         </div>
     )
