@@ -25,6 +25,8 @@ import Coin1 from "../assets/sections/about/Coin1.png"
 import Coin2 from "../assets/sections/about/Coin2.png"
 
 function About() {
+    const aboutRef = useRef(null);
+
     const [isCreshSpinning, setIsCreshSpinning] = useState(false);
     const [isMainHeadAnimating, setIsMainHeadAnimating] = useState(false);
 
@@ -38,23 +40,25 @@ function About() {
         return () => clearTimeout(timer);
     }, []);
 
-    const aboutRef = useRef(null);
+    const aboutCardRef = useRef(null);
 
     const controls = useAnimation();
 
     const [isAboutCardVisible, setIsAboutCardVisible] = useState(false);
     const [isAboutCardVisible2, setIsAboutCardVisible2] = useState(false);
 
-    const originRef = useRef(null);
+    const originCardRef = useRef(null);
 
     const [isOriginCardVisible, setIsOriginCardVisible] = useState(false);
     const [isOriginCardVisible2, setIsOriginCardVisible2] = useState(false);
 
+    const creshContentRef = useRef(null);
+
     const handleScroll = () => {
         const width = window.innerWidth;
 
-        const aboutRect = aboutRef.current.getBoundingClientRect();
-        const originRect = originRef.current.getBoundingClientRect();
+        const aboutRect = aboutCardRef.current.getBoundingClientRect();
+        const originRect = originCardRef.current.getBoundingClientRect();
 
         if (width < 1200) {
             setTimeout(() => setIsAboutCardVisible2(false))
@@ -74,6 +78,34 @@ function About() {
             setTimeout(() => setIsOriginCardVisible2(true), 300)
         }
     };
+
+    const handleChildScroll = () => {
+        const childElement = creshContentRef.current;
+
+        if (childElement) {
+            const isAtBottom
+                = childElement.scrollHeight - childElement.scrollTop === childElement.clientHeight;
+
+            if (isAtBottom) {
+                const tokenomics = document.getElementById("tokenomics");
+                tokenomics.scrollIntoView({ behavior: 'smooth' })
+            }
+        }
+    };
+
+    useEffect(() => {
+        const child = creshContentRef.current
+
+        if (child) {
+            child.addEventListener('scroll', handleChildScroll);
+        }
+
+        return () => {
+            if (child) {
+                child.removeEventListener('scroll', handleChildScroll);
+            }
+        };
+    }, []);
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
@@ -101,11 +133,12 @@ function About() {
 
     return (
         <section className="about">
-            <div id="section-1" className="about__part-1">
+            <div id="section-1" ref={aboutRef} className="about__part-1">
                 <Header/>
 
                 <div
                     id="about"
+                    ref={creshContentRef}
                     className="about__cresh-content"
                 >
                     <motion.div
@@ -158,7 +191,7 @@ function About() {
                     </div>
 
                     <div id="section-2"
-                         ref={aboutRef}
+                         ref={aboutCardRef}
                          className="about__about-card"
                     >
                         {isAboutCardVisible2 && currentScreenWidth >= 1200 &&
@@ -183,7 +216,7 @@ function About() {
 
                     <div
                         id="section-3"
-                        ref={originRef}
+                        ref={originCardRef}
                         className="about__origin-card"
                     >
                         {isOriginCardVisible2 && currentScreenWidth >= 1200 &&
@@ -202,7 +235,9 @@ function About() {
                             </motion.div>
                         }
                         {currentScreenWidth < 1200 &&
-                            <OriginCard/>
+                            <>
+                                <OriginCard/>
+                            </>
                         }
                     </div>
                 </div>

@@ -45,15 +45,15 @@ function App() {
                 <LoadingScreen progress={progress} />
             ) : (
                 <>
-                    <About/>
+                    <About />
 
-                    <Tokenomics/>
+                    <Tokenomics />
 
-                    <Roadmap/>
+                    <Roadmap />
 
                     <div className="roadmap-bg"></div>
 
-                    <BuyCresh/>
+                    <BuyCresh />
 
                     <div className="app__footer">
                         <Footer/>

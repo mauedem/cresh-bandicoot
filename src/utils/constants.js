@@ -8,7 +8,6 @@ export const NAV_ITEMS = [
         name: "About",
         href: "about",
     },
-    /* TODO check route */
     {
         id: 2,
         name: "Tokenomics",

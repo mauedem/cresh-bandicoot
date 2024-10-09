@@ -9,7 +9,7 @@ function TokenomicsCard() {
             className="tokenomics-card"
         >
             <div className="tokenomics-card__title">
-                <a id="tokenomics">Tokenomics</a>
+                <a>Tokenomics</a>
             </div>
 
             <div style={{ display: 'flex', flexDirection: 'column' }}>

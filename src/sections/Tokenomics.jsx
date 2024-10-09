@@ -9,7 +9,7 @@ import {useEffect, useRef, useState} from "react";
 import {motion, useAnimation} from "framer-motion";
 
 function Tokenomics() {
-    const tokenomicsRef = useRef(null);
+    const tokenomicsRef = useRef();
 
     const controls = useAnimation();
     const [isVisible, setIsVisible] = useState(false);
@@ -18,6 +18,7 @@ function Tokenomics() {
     const handleScroll = () => {
         const rect = tokenomicsRef.current.getBoundingClientRect();
 
+        /* TODO добавить opacity */
         if (rect.top >= 0) {
             setTimeout(() => setIsVisible(true), 300)
             setTimeout(() => setIsVisible2(true), 300)
@@ -45,7 +46,7 @@ function Tokenomics() {
     }, [isVisible, controls]);
 
     return (
-        <section ref={tokenomicsRef} className="tokenomics">
+        <section id="tokenomics" ref={tokenomicsRef} className="tokenomics">
             <img
                 className="tokenomics__black-hr"
                 src={BlackHR}
@@ -64,7 +65,7 @@ function Tokenomics() {
                         initial={{y: 400}}
                         animate={controls}
                         transition={{
-                            duration: 3,
+                            duration: 1,
                             ease: "easeOut",
                         }}
                         style={{
