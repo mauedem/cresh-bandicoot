@@ -5,41 +5,47 @@ import './Tokenomics.css'
 import VotePaper from "../assets/sections/common/VotePaper.webp";
 import BlackHR from "../assets/sections/tokenomics/BlackHR.png";
 
-import {useRef} from "react";
+import {useEffect, useRef, useState} from "react";
+import {motion, useAnimation} from "framer-motion";
 
 function Tokenomics() {
-    const ref = useRef(null);
+    const tokenomicsRef = useRef(null);
 
-    /* TODO доработать скролл */
-    // useEffect(() => {
-    //     const onScroll = () => {
-    //         let card = document.getElementById('tokenomics-card');
-    //         let lastScrollTop = 0;
-    //
-    //         let scrollTop = window.scrollY || document.documentElement.scrollTop;
-    //         console.log('scrollTop', scrollTop)
-    //
-    //         if (scrollTop > lastScrollTop) {
-    //             // Если скроллим вниз, поднимаем карточку вверх
-    //             card.style.transform = 'translateY(-100%)'; // Убрать карточку за экран
-    //         } else {
-    //             // Если скроллим вверх, возвращаем карточку обратно
-    //             card.style.transform = 'translateY(0)'; // Возвращаем карточку
-    //         }
-    //
-    //         lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Для мобильного или негативного скролла
-    //
-    //     }
-    //
-    //     window.removeEventListener('scroll', onScroll);
-    //     window.addEventListener('scroll', onScroll, { passive: true });
-    //
-    //     return () => window.removeEventListener('scroll', onScroll);
-    // }, []);
+    const controls = useAnimation();
+    const [isVisible, setIsVisible] = useState(false);
+    const [isVisible2, setIsVisible2] = useState(false);
 
+    const handleScroll = () => {
+        const rect = tokenomicsRef.current.getBoundingClientRect();
+
+        if (rect.top >= 0) {
+            setTimeout(() => setIsVisible(true), 300)
+            setTimeout(() => setIsVisible2(true), 300)
+        } else if (rect.top < -130) {
+            setTimeout(() => setIsVisible(false), 300)
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    useEffect(() => {
+        if (isVisible) {
+            controls.start({y: 0});
+        } else {
+            controls.start({y: -400}).then(() => {
+                // Здесь можно вызвать дополнительные действия, если нужно
+                setIsVisible2(false);
+            });
+        }
+    }, [isVisible, controls]);
 
     return (
-        <section ref={ref} className="tokenomics">
+        <section ref={tokenomicsRef} className="tokenomics">
             <img
                 className="tokenomics__black-hr"
                 src={BlackHR}
@@ -53,7 +59,21 @@ function Tokenomics() {
             />
 
             <div className="tokenomics__content">
-                <TokenomicsCard />
+                {isVisible2 &&
+                    <motion.div
+                        initial={{y: 400}}
+                        animate={controls}
+                        transition={{
+                            duration: 3,
+                            ease: "easeOut",
+                        }}
+                        style={{
+                            transform: 'translateX(-50%)',
+                        }}
+                    >
+                        <TokenomicsCard/>
+                    </motion.div>
+                }
             </div>
         </section>
     )

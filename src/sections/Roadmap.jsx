@@ -2,9 +2,9 @@ import RoadmapCard from "../components/roadmap/RoadmapCard";
 
 import {PHASES} from "../utils/constants";
 
-import { motion } from 'framer-motion';
+import {motion, useAnimation} from 'framer-motion';
 
-import {useRef, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 
 import './Roadmap.css'
 
@@ -22,7 +22,43 @@ function Roadmap() {
     const [currentPhase, setCurrentPhase] = useState(PHASES[0]);
     const [islandFloating, setIslandFloating] = useState(false);
 
-    const ref = useRef(null);
+    const roadmapRef = useRef(null);
+    const phasesRef = useRef(null);
+
+    const [isIsland1Visible, setIsIsland1Visible] = useState(false);
+    const [isIsland2Visible, setIsIsland2Visible] = useState(false);
+    const [isIsland3Visible, setIsIsland3Visible] = useState(false);
+
+    const controls = useAnimation();
+    const [isVisible, setIsVisible] = useState(false);
+
+    const handleScroll = () => {
+        const rect = phasesRef.current.getBoundingClientRect();
+
+        if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+            setTimeout(() => setIsIsland1Visible(true), 100)
+            setTimeout(() => setIsVisible(true), 300)
+
+            setTimeout(() => setIsIsland2Visible(true), 300)
+            setTimeout(() => setIsIsland3Visible(true), 600)
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    useEffect(() => {
+        if (isVisible) {
+            controls.start({y: 0});
+        } else {
+            controls.start({y: 400});
+        }
+    }, [isVisible, controls]);
 
     // Функция для получения значений translateY в зависимости от ширины экрана
     const getCreshCountingValues = () => {
@@ -101,7 +137,7 @@ function Roadmap() {
     }
 
     return (
-        <section ref={ref} className="roadmap">
+        <section ref={roadmapRef} className="roadmap">
             <img
                 className="roadmap__table"
                 src={Table}
@@ -143,27 +179,29 @@ function Roadmap() {
                 }}
             />
 
-            <div className="roadmap__phases">
-                <motion.img
-                    className="roadmap__island-1"
-                    src={Island1}
-                    alt="Island"
-                    style={{
-                        transform: 'translate(-50%, 50%)',
-                    }}
-                    animate={islandFloating ? {y: [0, -30, 0], x: [0, 10, 0, -10, 0]} : {scale: [0, 1.1, 1]}}
-                    transition={{
-                        duration: islandFloating ? 4 : 1,
-                        ease: islandFloating ? "linear" : "easeOut",
-                        repeat: islandFloating ? Infinity : 0,
-                        repeatType: 'loop',
-                        onComplete: () => {
-                            if (!islandFloating) {
-                                setIslandFloating(true)
+            <div ref={phasesRef} className="roadmap__phases">
+                {isIsland1Visible &&
+                    <motion.img
+                        className="roadmap__island-1"
+                        src={Island1}
+                        alt="Island"
+                        style={{
+                            transform: 'translate(-50%, 50%)',
+                        }}
+                        animate={islandFloating ? {y: [0, -30, 0], x: [0, 10, 0, -10, 0]} : {scale: [0, 1.1, 1]}}
+                        transition={{
+                            duration: islandFloating ? 4 : 1,
+                            ease: islandFloating ? "linear" : "easeOut",
+                            repeat: islandFloating ? Infinity : 0,
+                            repeatType: 'loop',
+                            onComplete: () => {
+                                if (!islandFloating) {
+                                    setIslandFloating(true)
+                                }
                             }
-                        }
-                    }}
-                />
+                        }}
+                    />
+                }
 
                 <div className="roadmap__islands">
                     <motion.img
@@ -184,61 +222,96 @@ function Roadmap() {
                         }}
                     />
 
-                    <motion.img
-                        className="roadmap__island-2"
-                        src={Island2}
-                        alt="Island"
-                        style={{
-                            transform: 'translate(-50%, 50%)',
-                        }}
-                        animate={islandFloating ? {y: [0, -30, 0], x: [0, 10, 0, -10, 0]} : {scale: [0, 1.1, 1]}}
-                        transition={{
-                            duration: islandFloating ? 3 : 1,
-                            ease: islandFloating ? "linear" : "easeOut",
-                            repeat: islandFloating ? Infinity : 0,
-                            repeatType: 'loop',
-                            onComplete: () => {
-                                if (!islandFloating) {
-                                    setIslandFloating(true)
+                    {isIsland2Visible &&
+                        <motion.img
+                            className="roadmap__island-2"
+                            src={Island2}
+                            alt="Island"
+                            style={{
+                                transform: 'translate(-50%, 50%)',
+                            }}
+                            animate={islandFloating ? {y: [0, -30, 0], x: [0, 10, 0, -10, 0]} : {scale: [0, 1.1, 1]}}
+                            transition={{
+                                duration: islandFloating ? 3 : 1,
+                                ease: islandFloating ? "linear" : "easeOut",
+                                repeat: islandFloating ? Infinity : 0,
+                                repeatType: 'loop',
+                                onComplete: () => {
+                                    if (!islandFloating) {
+                                        setIslandFloating(true)
+                                    }
                                 }
-                            }
-                        }}
-                    />
+                            }}
+                        />
+                    }
 
-                    <motion.img
-                        className="roadmap__island-3"
-                        src={Island3}
-                        alt="Island"
-                        style={{
-                            transform: 'translate(-50%, 50%)',
-                        }}
-                        animate={islandFloating ? {y: [0, -30, 0], x: [0, 10, 0, -10, 0]} : {scale: [0, 1.1, 1]}}
-                        transition={{
-                            duration: islandFloating ? 5 : 1,
-                            ease: islandFloating ? "linear" : "easeOut",
-                            repeat: islandFloating ? Infinity : 0,
-                            repeatType: 'loop',
-                            onComplete: () => {
-                                if (!islandFloating) {
-                                    setIslandFloating(true)
+                    {isIsland3Visible &&
+                        <motion.img
+                            className="roadmap__island-3"
+                            src={Island3}
+                            alt="Island"
+                            style={{
+                                transform: 'translate(-50%, 50%)',
+                            }}
+                            animate={islandFloating ? {y: [0, -30, 0], x: [0, 10, 0, -10, 0]} : {scale: [0, 1.1, 1]}}
+                            transition={{
+                                duration: islandFloating ? 5 : 1,
+                                ease: islandFloating ? "linear" : "easeOut",
+                                repeat: islandFloating ? Infinity : 0,
+                                repeatType: 'loop',
+                                onComplete: () => {
+                                    if (!islandFloating) {
+                                        setIslandFloating(true)
+                                    }
                                 }
-                            }
-                        }}
-                    />
+                            }}
+                        />
+                    }
                 </div>
             </div>
 
             <div id="roadmap" className="roadmap__cards">
-                <div className="roadmap__roadmap-cards">{roadmapPhases}</div>
+                <div className="roadmap__roadmap-cards">
+                    {isVisible &&
+                        <motion.div
+                            className="roadmap__roadmap-cards"
+                            initial={{y: 400}}  // Начальная позиция ниже экрана
+                            animate={controls}
+                            transition={{
+                                duration: 1,
+                                ease: "easeOut",
+                            }}
+                            style={{
+                                transform: 'translateX(-50%)', // Центрируем по горизонтали
+                            }}
+                        >
+                            {roadmapPhases}
+                        </motion.div>
+                    }
+                </div>
 
                 <div className="roadmap__roadmap-card">
-                    <RoadmapCard
-                        subtitle={currentPhase.subtitle}
-                        title={currentPhase.title}
-                        content={currentPhase.content}
-                        style={{...currentPhase.style, transform: 'rotate(0deg)'}}
-                        handleClick={changePhase}
-                    />
+                    {isVisible &&
+                        <motion.div
+                            initial={{y: 400}}  // Начальная позиция ниже экрана
+                            animate={controls}
+                            transition={{
+                                duration: 1,
+                                ease: "easeOut",
+                            }}
+                            style={{
+                                transform: 'translateX(-50%)', // Центрируем по горизонтали
+                            }}
+                        >
+                            <RoadmapCard
+                                subtitle={currentPhase.subtitle}
+                                title={currentPhase.title}
+                                content={currentPhase.content}
+                                style={{...currentPhase.style, transform: 'rotate(0deg)'}}
+                                handleClick={changePhase}
+                            />
+                        </motion.div>
+                    }
                 </div>
             </div>
         </section>

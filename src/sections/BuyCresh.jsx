@@ -3,7 +3,7 @@ import Footer from "../components/common/Footer";
 
 import confetti from 'canvas-confetti';
 
-import {useEffect, useRef} from 'react';
+import {useEffect, useRef, useState} from 'react';
 
 import {STEPS} from "../utils/constants";
 
@@ -14,7 +14,10 @@ import AngryKamila from "../assets/sections/buy-cresh/AngryKamila.webp"
 import CreshAndBall from "../assets/sections/buy-cresh/CreshAndBall.webp";
 
 function BuyCresh(){
+    const [hasBuyCreshCardBeenVisible, setHasBuyCreshCardBeenVisible] = useState(false);
+
     const ref = useRef(null);
+    const buyCreshCardRef = useRef(null);
 
     const scalar = 2;
     const unicorn = confetti.shapeFromText({text: '🍋', scalar});
@@ -49,21 +52,33 @@ function BuyCresh(){
         });
     };
 
-    // TODO вызывать ф-ию когда cresh buy в зоне видимости
-    useEffect(() => {
-        const shootIntervals = [0, 100, 200].map((delay) =>
-            setTimeout(shoot, delay)
-        );
+    const handleScroll = () => {
+        if (buyCreshCardRef.current) {
+            const rect = buyCreshCardRef.current.getBoundingClientRect();
 
-        // Cleanup timeouts on component unmount
+            if (rect.top <= window.innerHeight && rect.bottom >= 0 && !hasBuyCreshCardBeenVisible) {
+                setTimeout(shoot, 0);
+                setTimeout(shoot, 100);
+                setTimeout(shoot, 200);
+
+                setHasBuyCreshCardBeenVisible(true);
+            } else if (rect.bottom < 0 || rect.top > window.innerHeight) {
+                setHasBuyCreshCardBeenVisible(false);
+            }
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+
         return () => {
-            shootIntervals.forEach(clearTimeout);
+            window.removeEventListener('scroll', handleScroll);
         };
-    }, []);
+    }, [hasBuyCreshCardBeenVisible]);
 
     return (
         <section ref={ref} className="buy-cresh">
-            <BuyCreshCard steps={STEPS}/>
+            <BuyCreshCard steps={STEPS} />
 
             <img
                 className="buy-cresh__cresh-and-ball"
@@ -80,6 +95,7 @@ function BuyCresh(){
             </canvas>
 
             <img
+                ref={buyCreshCardRef}
                 className="buy-cresh__cresh-buying"
                 src={CreshBuying}
                 alt="Cresh Buying"

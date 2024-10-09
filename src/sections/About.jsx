@@ -4,7 +4,7 @@ import OriginCard from "../components/about/OriginCard";
 
 import {useEffect, useRef, useState} from "react";
 
-import {motion} from 'framer-motion';
+import {motion, useAnimation} from 'framer-motion';
 
 import './About.css'
 
@@ -25,46 +25,79 @@ import Coin1 from "../assets/sections/about/Coin1.png"
 import Coin2 from "../assets/sections/about/Coin2.png"
 
 function About() {
-    const [creshSpinning, setCreshSpinning] = useState(false);
+    const [isCreshSpinning, setIsCreshSpinning] = useState(false);
+    const [isMainHeadAnimating, setIsMainHeadAnimating] = useState(false);
 
-    const ref = useRef(null);
+    const [currentScreenWidth, setCurrentScreenWidth] = useState(0);
 
-    /* TODO скролл - доработать или убрать */
     useEffect(() => {
-        const onScroll = () => {
-            console.log('START')
-            const scrollContainer = document.querySelector('.about__cresh-content');
+        const timer = setTimeout(() => {
+            setIsMainHeadAnimating(true);
+        }, 1000);
 
-            console.log('scrollContainer.scrollHeight - scrollContainer.scrollTop = ', scrollContainer.scrollHeight - scrollContainer.scrollTop)
-            console.log('scrollContainer.clientHeight = ', scrollContainer.clientHeight)
-            console.log(scrollContainer.scrollHeight - scrollContainer.scrollTop <= scrollContainer.clientHeight)
+        return () => clearTimeout(timer);
+    }, []);
 
-            scrollContainer.addEventListener('scroll', () => {
-                if (Math.floor(scrollContainer.scrollHeight - scrollContainer.scrollTop) <= Math.floor(scrollContainer.clientHeight)) {
-                    // Если содержимое прокручено до конца
-                    console.log('YES')
-                    // document.body.style.overflow = 'auto'; // Включаем прокрутку страницы
-                } else {
-                    console.log('NO')
-                }
-            });
+    const aboutRef = useRef(null);
 
-            // Убедитесь, что при загрузке страницы прокрутка полностью выключена
-            // document.body.style.overflow = 'hidden';
+    const controls = useAnimation();
 
+    const [isAboutCardVisible, setIsAboutCardVisible] = useState(false);
+    const [isAboutCardVisible2, setIsAboutCardVisible2] = useState(false);
 
+    const originRef = useRef(null);
 
-            // const block = document.querySelector('.about__cresh-content');
-            // const scrollY = window.scrollY;
-            //
-            // block.style.transform = `translateY(${-scrollY}px)`;
+    const [isOriginCardVisible, setIsOriginCardVisible] = useState(false);
+    const [isOriginCardVisible2, setIsOriginCardVisible2] = useState(false);
+
+    const handleScroll = () => {
+        const width = window.innerWidth;
+
+        const aboutRect = aboutRef.current.getBoundingClientRect();
+        const originRect = originRef.current.getBoundingClientRect();
+
+        if (width < 1200) {
+            setTimeout(() => setIsAboutCardVisible2(false))
+            setTimeout(() => setIsOriginCardVisible2(false))
         }
 
-        window.removeEventListener('scroll', onScroll);
-        window.addEventListener('scroll', onScroll, { passive: true });
+        setCurrentScreenWidth(width);
 
-        return () => window.removeEventListener('scroll', onScroll);
+
+        if (aboutRect.top >= 0 && aboutRect.bottom <= window.innerHeight) {
+            setTimeout(() => setIsAboutCardVisible(true), 300)
+            setTimeout(() => setIsAboutCardVisible2(true), 300)
+        }
+
+        if (originRect.top >= 0 && originRect.bottom <= window.innerHeight) {
+            setTimeout(() => setIsOriginCardVisible(true), 300)
+            setTimeout(() => setIsOriginCardVisible2(true), 300)
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
     }, []);
+
+    useEffect(() => {
+        if (isAboutCardVisible) {
+            controls.start({y: 0});
+        } else {
+            controls.start({y: -400})
+        }
+    }, [isAboutCardVisible, controls]);
+
+    useEffect(() => {
+        if (isOriginCardVisible) {
+            controls.start({y: 0});
+        } else {
+            controls.start({y: -400})
+        }
+    }, [isOriginCardVisible, controls]);
 
     return (
         <section className="about">
@@ -73,22 +106,21 @@ function About() {
 
                 <div
                     id="about"
-                    ref={ref}
                     className="about__cresh-content"
                 >
                     <motion.div
                         className="about__cresh-bandicoot"
                         style={{display: 'inline-block', transformOrigin: 'center center'}}
                         initial={{y: 0}}
-                        animate={creshSpinning ? {rotateY: [0, 3240]} : {y: [-200, -100, 0]}}
+                        animate={isCreshSpinning ? {rotateY: [0, 3240]} : {y: [-200, -100, 0]}}
                         transition={{
-                            duration: creshSpinning ? 0.5 : 0.5,
-                            ease: creshSpinning ? "linear" : "easeOut",
-                            repeat: creshSpinning ? Infinity : 0,
-                            repeatDelay: creshSpinning ? 3.5 : 0,
+                            duration: isCreshSpinning ? 0.5 : 0.5,
+                            ease: isCreshSpinning ? "linear" : "easeOut",
+                            repeat: isCreshSpinning ? Infinity : 0,
+                            repeatDelay: isCreshSpinning ? 5 : 0,
                             onComplete: () => {
-                                if (!creshSpinning) {
-                                    setCreshSpinning(true)
+                                if (!isCreshSpinning) {
+                                    setIsCreshSpinning(true)
                                 }
                             }
                         }}
@@ -116,24 +148,62 @@ function About() {
                     />
 
                     <div className="about__cresh-card">
-                        <img
-                            className="about__cresh-trump"
-                            src={MainHead}
-                            alt="Cresh Trump"
-                        />
+                        {isMainHeadAnimating &&
+                            <img
+                                className="about__cresh-trump"
+                                src={MainHead}
+                                alt="Cresh Trump"
+                            />
+                        }
                     </div>
 
                     <div id="section-2"
+                         ref={aboutRef}
                          className="about__about-card"
                     >
-                        <AboutCard/>
+                        {isAboutCardVisible2 && currentScreenWidth >= 1200 &&
+                            <motion.div
+                                initial={{y: 400}}
+                                animate={controls}
+                                transition={{
+                                    duration: 2,
+                                    ease: "easeOut",
+                                }}
+                                style={{
+                                    transform: 'translateX(-50%)',
+                                }}
+                            >
+                                <AboutCard/>
+                            </motion.div>
+                        }
+                        {currentScreenWidth < 1200 &&
+                            <AboutCard/>
+                        }
                     </div>
 
                     <div
                         id="section-3"
+                        ref={originRef}
                         className="about__origin-card"
                     >
-                        <OriginCard/>
+                        {isOriginCardVisible2 && currentScreenWidth >= 1200 &&
+                            <motion.div
+                                initial={{y: 400}}
+                                animate={controls}
+                                transition={{
+                                    duration: 2,
+                                    ease: "easeOut",
+                                }}
+                                style={{
+                                    transform: 'translateX(-50%)',
+                                }}
+                            >
+                                <OriginCard/>
+                            </motion.div>
+                        }
+                        {currentScreenWidth < 1200 &&
+                            <OriginCard/>
+                        }
                     </div>
                 </div>
 
@@ -180,7 +250,7 @@ function About() {
                     style={{display: 'flex', justifyContent: 'center'}}
                     animate={{x: ['-1%', '100%']}}
                     transition={{
-                        duration: 500,
+                        duration: 300,
                         ease: 'linear',
                         repeat: Infinity,
                         delay: -0.9,
