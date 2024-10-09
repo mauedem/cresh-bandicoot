@@ -1,24 +1,23 @@
 import Header from "../components/common/Header";
-import CreshCard from "../components/about/CreshCard";
 import AboutCard from "../components/about/AboutCard";
 import OriginCard from "../components/about/OriginCard";
 
 import {useEffect, useRef, useState} from "react";
 
-import {motion, useScroll, useTransform} from 'framer-motion';
+import {motion} from 'framer-motion';
 
 import './About.css'
 
 import Clouds from "../assets/sections/about/Clouds.png"
+import Cloud1 from "../assets/sections/about/Cloud1.svg"
+import Cloud2 from "../assets/sections/about/Cloud2.svg"
 import CreshBandicoot from "../assets/sections/common/CreshBandicoot.png"
 import SpinningBox from "../assets/sections/about/SpinningBox.gif"
+import MainHead from "../assets/sections/about/MainHead.webp"
 import RightPalm from "../assets/sections/about/RightPalm.png"
 import LeftPalm from "../assets/sections/about/LeftPalm.png"
-import Flag from "../assets/sections/about/Flag.gif"
-import KamilaFlying from "../assets/sections/about/KamilaFlying.png"
-import Fire2 from "../assets/sections/about/Fire2.png"
-import Fire3 from "../assets/sections/about/Fire3.png"
-import Fire4 from "../assets/sections/about/Fire1.png"
+import Flag from "../assets/sections/about/Flag.webp"
+import KamilaFlying from "../assets/sections/about/KamilaFlying.webp"
 import CreshRiding from "../assets/sections/about/CreshRiding.png"
 import Treasure from "../assets/sections/about/Treasure.png"
 import TreasureShadow from "../assets/sections/about/TreasureShadow.svg"
@@ -26,16 +25,9 @@ import Coin1 from "../assets/sections/about/Coin1.png"
 import Coin2 from "../assets/sections/about/Coin2.png"
 
 function About() {
-    const [currentFire, setCurrentFire] = useState(0);
     const [creshSpinning, setCreshSpinning] = useState(false);
 
     const ref = useRef(null);
-
-    const fireImages = [
-        Fire2,
-        Fire3,
-        Fire4,
-    ];
 
     /* TODO скролл - доработать или убрать */
     useEffect(() => {
@@ -74,20 +66,16 @@ function About() {
         return () => window.removeEventListener('scroll', onScroll);
     }, []);
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentFire((prev) => (prev + 1) % fireImages.length);
-        }, 140); // Интервал смены изображений огней
-
-        return () => clearInterval(interval);
-    }, []);
-
     return (
         <section className="about">
-            <div id="section-1" className="about__1-bg">
+            <div id="section-1" className="about__part-1">
                 <Header/>
 
-                <div ref={ref} className="about__cresh-content">
+                <div
+                    id="about"
+                    ref={ref}
+                    className="about__cresh-content"
+                >
                     <motion.div
                         className="about__cresh-bandicoot"
                         style={{display: 'inline-block', transformOrigin: 'center center'}}
@@ -128,7 +116,11 @@ function About() {
                     />
 
                     <div className="about__cresh-card">
-                        <CreshCard/>
+                        <img
+                            className="about__cresh-trump"
+                            src={MainHead}
+                            alt="Cresh Trump"
+                        />
                     </div>
 
                     <div id="section-2"
@@ -144,6 +136,44 @@ function About() {
                         <OriginCard/>
                     </div>
                 </div>
+
+                <motion.div
+                    className="about__cloud-1"
+                    style={{display: 'flex', justifyContent: 'center'}}
+                    animate={{x: ['-1%', '100%']}}
+                    transition={{
+                        duration: 300,
+                        ease: 'linear',
+                        repeat: Infinity,
+                        delay: -0.9,
+                        repeatDelay: 0,
+                    }}
+                >
+                    <img
+                        className="about__cloud-1"
+                        src={Cloud1}
+                        alt="Cloud"
+                    />
+                </motion.div>
+
+                <motion.div
+                    className="about__cloud-2"
+                    style={{display: 'flex', justifyContent: 'center'}}
+                    animate={{x: ['-1%', '100%']}}
+                    transition={{
+                        duration: 300,
+                        ease: 'linear',
+                        repeat: Infinity,
+                        delay: -0.9,
+                        repeatDelay: 0,
+                    }}
+                >
+                    <img
+                        className="about__cloud-2"
+                        src={Cloud2}
+                        alt="Cloud"
+                    />
+                </motion.div>
 
                 <motion.div
                     className="about__clouds"
@@ -184,7 +214,7 @@ function About() {
                     className="about__left-palm"
                     animate={{rotate: [0, 2, -2, 0]}}
                     transition={{
-                        duration: 4,
+                        duration: 3,
                         ease: "easeInOut",
                         repeat: Infinity,
                     }}
@@ -196,64 +226,17 @@ function About() {
                     />
                 </motion.div>
 
-                <img className="about__flag" src={Flag} alt="Flag" />
+                <img className="about__flag" src={Flag} alt="Flag"/>
             </div>
 
-            <div className="about__2-bg">
+            <div className="about__part-2">
                 <div className="about__about-content">
-                <div style={{position: 'relative'}}>
-                        <motion.div
-                            style={{
-                                position: 'relative',
-                                bottom: '140px',
-                                left: '4%',
-                            }}
-                        >
-                            <motion.img
-                                className="about__fire-1"
-                                src={fireImages[currentFire]}
-                                alt="Fire"
-                                animate={{
-                                    y: [0, -16, 0],
-                                    rotate: [0, 4, -4, 0],
-                                }}
-                                transition={{
-                                    duration: 2,
-                                    ease: 'easeInOut',
-                                    repeat: Infinity,
-                                }}
-                            />
-
-                            <motion.img
-                                src={KamilaFlying}
-                                alt="Kamila Flying"
-                                className="about__kamila-flying"
-                                animate={{
-                                    y: [0, -16, 0],
-                                    rotate: [0, 4, -4, 0],
-                                }}
-                                transition={{
-                                    duration: 2,
-                                    ease: 'easeInOut',
-                                    repeat: Infinity,
-                                }}
-                            />
-
-                            <motion.img
-                                className="about__fire-2"
-                                src={fireImages[currentFire]}
-                                alt="Fire"
-                                animate={{
-                                    y: [0, -16, 0],
-                                    rotate: [0, 4, -4, 0],
-                                }}
-                                transition={{
-                                    duration: 2,
-                                    ease: 'easeInOut',
-                                    repeat: Infinity,
-                                }}
-                            />
-                        </motion.div>
+                    <div style={{position: 'relative'}}>
+                        <img
+                            className="about__kamila-flying"
+                            src={KamilaFlying}
+                            alt="Kamila Flying"
+                        />
 
                         <motion.img
                             src={CreshRiding}

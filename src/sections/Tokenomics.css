@@ -38,6 +38,13 @@
     z-index: 9999;
 }
 
+.tokenomics__black-hr {
+    position: absolute;
+    top: -4px;
+    width: 100%;
+    max-width: 1748px;
+}
+
 @media (min-width: 992px) and (max-width: 1199px) {
     .tokenomics {
         height: 650px;

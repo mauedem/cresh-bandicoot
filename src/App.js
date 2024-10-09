@@ -15,11 +15,10 @@ function App() {
     const [progress, setProgress] = useState(0);
 
     useEffect(() => {
-        // Эмуляция загрузки
         const loadResource = async () => {
-            // Эмуляция ожидания 2 секунд
             await new Promise((resolve) => setTimeout(resolve, 2000));
 
+            /* TODO расскомментировать */
             setLoading(false);
         };
 
@@ -39,10 +38,6 @@ function App() {
 
         return () => clearInterval(interval);
     }, []);
-
-    // const scrollToRef = (ref) => {
-    //     ref.current?.scrollIntoView({behavior: "smooth", block: "start"});
-    // };
 
     return (
         <div className="App">

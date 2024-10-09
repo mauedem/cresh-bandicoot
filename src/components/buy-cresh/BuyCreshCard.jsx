@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useRef, useState} from "react";
 
 import './BuyCreshCard.css'
 
@@ -7,6 +7,8 @@ import FilledCircle from "../../assets/sections/buy-cresh/FilledCircle.svg"
 
 function BuyCreshCard({ steps }) {
     const [currentStep, setCurrentStep] = useState(steps[0]);
+
+    const stepRef = useRef(null);
 
     const imgItems = steps.map((step, idx) => {
         return (
@@ -22,7 +24,11 @@ function BuyCreshCard({ steps }) {
     })
 
     function handleClick(idx) {
+        stepRef.current.classList.add('step--hidden');
+
         setCurrentStep(steps[idx])
+
+        setTimeout(() => stepRef.current.classList.remove('step--hidden'), 500)
     }
 
     return (
@@ -47,7 +53,7 @@ function BuyCreshCard({ steps }) {
             </div>
 
             <div className="buy-cresh-card__steps">
-                <div className="step">
+                <div ref={stepRef} className="step step--visible">
                     <div className="step__subtitle">{currentStep.subtitle}</div>
                     <div className="step__title">{currentStep.title}</div>
                     <div className="step__text">{currentStep.text}</div>

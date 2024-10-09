@@ -40,6 +40,7 @@
     display: flex;
     align-items: center;
     box-shadow: 0 7px 0 0 #003399;
+    transition: background-color 0.5s ease, transform 0.2s ease;
 }
 
 .buy-cresh-btn:hover {

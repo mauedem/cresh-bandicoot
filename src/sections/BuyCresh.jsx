@@ -10,8 +10,8 @@ import {STEPS} from "../utils/constants";
 import './BuyCresh.css'
 
 import CreshBuying from "../assets/sections/buy-cresh/CreshBuying.png"
-import AngryKamila from "../assets/sections/buy-cresh/AngryKamila.gif"
-import CreshAndBall from "../assets/sections/roadmap/CreshAndBall.gif";
+import AngryKamila from "../assets/sections/buy-cresh/AngryKamila.webp"
+import CreshAndBall from "../assets/sections/buy-cresh/CreshAndBall.webp";
 
 function BuyCresh(){
     const ref = useRef(null);

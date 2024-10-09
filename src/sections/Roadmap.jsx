@@ -10,9 +10,9 @@ import './Roadmap.css'
 
 import CreshBandicoot from "../assets/sections/common/CreshBandicoot.png";
 import Table from "../assets/sections/roadmap/Table.png";
-import Box1 from "../assets/sections/roadmap/Box1.gif";
-import Box2 from "../assets/sections/roadmap/Box2.gif";
-import Mask from "../assets/sections/roadmap/Mask.gif";
+import Box1 from "../assets/sections/roadmap/Box1.webp";
+import Box2 from "../assets/sections/roadmap/Box2.webp";
+import Mask from "../assets/sections/roadmap/Mask.webp";
 import CreshCounting from "../assets/sections/roadmap/CreshCounting.png";
 import Island1 from "../assets/sections/roadmap/Island1.png";
 import Island2 from "../assets/sections/roadmap/Island2.png";

@@ -1,28 +1,33 @@
 .about {
+    position: relative;
     height: 2159px;
     width: 100%;
     max-width: 1748px;
     scroll-behavior: smooth;
 
     /* TODO доработать или убрать */
-    scroll-padding-block: 0;
-    scroll-margin-block: 0;
+    /*scroll-padding-block: 0;*/
+    /*scroll-margin-block: 0;*/
 
-    scroll-snap-stop: always;
-    scroll-snap-type: y mandatory;
+    /*scroll-snap-stop: always;*/
+    /*scroll-snap-type: y mandatory;*/
+    /*overflow-y: scroll;*/
+
+    scroll-snap-align: start !important;
 }
 
-.about__1-bg {
+.about__part-1 {
     position: relative;
     height: 2159px;
     background-image: url(../assets/sections/about/AboutBg.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    scroll-snap-align: start;
     overflow: hidden;
+
+    /*scroll-snap-align: start !important;*/
 }
 
-.about__2-bg {
+.about__part-2 {
     position: relative;
     height: 0;
     width: 100%;
@@ -30,8 +35,9 @@
     background-size: 100%;
     background-position: top -1070px right 0;
     background-repeat: no-repeat;
-    scroll-snap-align: start;
     bottom: 32%;
+
+    /*scroll-snap-align: start !important;*/
 }
 
 .about__cresh-content {
@@ -48,7 +54,7 @@
 
 .about__cresh-card {
     position: absolute;
-    top: 470px;
+    top: -40px;
     z-index: 999;
 }
 
@@ -94,6 +100,22 @@
     width: 3500px;
     height: 341px;
     top: 5%;
+    opacity: 0.5;
+}
+
+.about__cloud-1 {
+    position: absolute;
+    top: 5%;
+    height: 335px;
+    width: 778px;
+}
+
+.about__cloud-2 {
+    position: absolute;
+    top: 8%;
+    right: 5%;
+    height: 369px;
+    width: 898px;
 }
 
 .about__left-palm {
@@ -122,20 +144,15 @@
     z-index: 99;
 }
 
-.about__girl-flying {
-    position: relative;
+.about__kamila-flying {
+    position: absolute;
+
     left: 40px;
     bottom: -300px;
     height: 481px;
     width: 457px;
-}
 
-.about__kamila-flying {
-    position: absolute;
-    width: 419px;
-    height: 352px;
     z-index: 99;
-    transform: translate(-50%, -50%);
 }
 
 .about__fire-1 {
@@ -249,19 +266,20 @@
         background-repeat: no-repeat;
     }
 
-    .about__1-bg {
+    .about__part-1 {
         height: 1902px;
         background-image: none;
     }
 
-    .about__2-bg {
+    .about__part-2 {
         height: 1902px;
         background-image: none;
         top: -30%;
     }
 
     .about__cresh-content {
-        overflow: auto;
+        overflow-x: hidden;
+        overflow-y: auto;
         height: 1902px;
         margin-top: -68px;
     }
@@ -275,7 +293,7 @@
     }
 
     .about__cresh-card {
-        top: 536px;
+        top: 24px;
     }
 
     .about__about-card {
@@ -286,6 +304,16 @@
         margin-top: 0;
         padding-bottom: 100px;
         transform: translate(-50%, 155%);
+    }
+
+    .about__cloud-1 {
+        height: 280px;
+        width: 650px;
+    }
+
+    .about__cloud-2 {
+        height: 290px;
+        width: 705px;
     }
 
     .about__clouds {
@@ -312,9 +340,10 @@
     }
 
     .about__kamila-flying {
-        width: 380px;
-        height: 320px;
-        bottom: -260px;
+        left: 10px;
+        bottom: -200px;
+        height: 380px;
+        width: 361px;
     }
 
     .about__fire-1 {
@@ -369,25 +398,26 @@
         background-repeat: no-repeat;
     }
 
-    .about__1-bg {
+    .about__part-1 {
         height: 1502px;
         background-image: none;
     }
 
-    .about__2-bg {
+    .about__part-2 {
         height: 1502px;
         background-image: none;
         top: -21.8%;
     }
 
     .about__cresh-content {
-        overflow: auto;
+        overflow-x: hidden;
+        overflow-y: auto;
         height: 1502px;
         margin-top: -60px;
     }
 
     .about__cresh-card {
-        top: 470px;
+        top: -40px;
     }
 
     .about__about-card {
@@ -411,6 +441,16 @@
         height: 164px;
         width: 182px;
         left: -20px;
+    }
+
+    .about__cloud-1 {
+        height: 210px;
+        width: 487px;
+    }
+
+    .about__cloud-2 {
+        height: 210px;
+        width: 511px;
     }
 
     .about__clouds {
@@ -441,9 +481,10 @@
     }
 
     .about__kamila-flying {
-        width: 319px;
-        height: 268px;
-        bottom: -116px;
+        height: 300px;
+        width: 290px;
+        bottom: -20px;
+        left: 20px;
     }
 
     .about__fire-1 {
@@ -501,25 +542,30 @@
         background-repeat: no-repeat;
     }
 
-    .about__1-bg {
+    .about__part-1 {
         height: 1102px;
         background-image: none;
     }
 
-    .about__2-bg {
+    .about__part-2 {
         height: 1102px;
         background-image: none;
         top: -15%;
     }
 
     .about__cresh-content {
-        overflow: auto;
+        overflow-x: hidden;
+        overflow-y: auto;
         height: 1102px;
         margin-top: -60px;
     }
 
+    .about__cresh-trump {
+        width: 900px;
+    }
+
     .about__cresh-card {
-        top: 410px;
+        top: 90px;
     }
 
     .about__about-card {
@@ -543,6 +589,16 @@
         width: 155px;
         top: 352px;
         left: -16px;
+    }
+
+    .about__cloud-1 {
+        height: 160px;
+        width: 371px;
+    }
+
+    .about__cloud-2 {
+        height: 160px;
+        width: 389px;
     }
 
     .about__clouds {
@@ -573,9 +629,10 @@
     }
 
     .about__kamila-flying {
-        width: 196px;
         height: 165px;
-        bottom: -60px;
+        width: 165px;
+        bottom: 60px;
+        left: 38px;
     }
 
     .about__fire-1 {
@@ -633,19 +690,20 @@
         background-repeat: no-repeat;
     }
 
-    .about__1-bg {
+    .about__part-1 {
         height: 702px;
         background-image: none;
     }
 
-    .about__2-bg {
+    .about__part-2 {
         height: 702px;
         background-image: none;
         top: -46%;
     }
 
     .about__cresh-content {
-        overflow: auto;
+        overflow-x: hidden;
+        overflow-y: auto;
         height: 702px;
         width: 100%;
         margin-top: -60px;
@@ -664,7 +722,11 @@
     }
 
     .about__cresh-card {
-        top: 300px;
+        top: 20px;
+    }
+
+    .about__cresh-trump {
+        width: 800px;
     }
 
     .about__cresh-bandicoot {
@@ -678,6 +740,16 @@
         height: 92px;
         width: 102px;
         left: -10px;
+    }
+
+    .about__cloud-1 {
+        height: 120px;
+        width: 278px;
+    }
+
+    .about__cloud-2 {
+        height: 110px;
+        width: 267px;
     }
 
     .about__clouds {
@@ -711,17 +783,11 @@
         margin-top: 220px;
     }
 
-    .about__girl-flying {
+    .about__kamila-flying {
         height: 153px;
         width: 148px;
         bottom: 30px;
         left: 1%;
-    }
-
-    .about__kamila-flying {
-        width: 166px;
-        height: 140px;
-        bottom: -90px;
     }
 
     .about__fire-1 {

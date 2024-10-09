@@ -1,7 +1,7 @@
 import './LoadingScreen.css'
 
 import Cresh from "../../assets/sections/common/Cresh.png"
-import VotePaper from "../../assets/sections/common/VotePaper.gif"
+import VotePaper from "../../assets/sections/common/VotePaper.webp"
 
 function LoadingScreen({ progress }) {
     return (

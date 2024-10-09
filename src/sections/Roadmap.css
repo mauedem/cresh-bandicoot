@@ -37,7 +37,7 @@
 
 .roadmap__mask {
     position: relative;
-    bottom: 50px !important;
+    bottom: 70px !important;
     left: 80%;
     height: 191px;
     width: 181px;
@@ -236,7 +236,7 @@
         height: 116px;
         width: 120px;
         left: 79%;
-        bottom: 32px;
+        bottom: 32px !important;
     }
 
     .roadmap__box-1 {
@@ -302,7 +302,7 @@
         height: 88px;
         width: 84px;
         left: 80%;
-        bottom: 32px;
+        bottom: 32px !important;
     }
 
     .roadmap__box-1 {
@@ -372,7 +372,7 @@
         height: 62px;
         width: 59px;
         left: 79%;
-        bottom: 20px;
+        bottom: 20px !important;
     }
 
     .roadmap__box-1 {

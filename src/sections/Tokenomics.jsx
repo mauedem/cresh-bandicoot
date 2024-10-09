@@ -2,7 +2,9 @@ import TokenomicsCard from "../components/tokenomics/TokenomicsCard";
 
 import './Tokenomics.css'
 
-import VotePaper from "../assets/sections/common/VotePaper.gif";
+import VotePaper from "../assets/sections/common/VotePaper.webp";
+import BlackHR from "../assets/sections/tokenomics/BlackHR.png";
+
 import {useRef} from "react";
 
 function Tokenomics() {
@@ -38,6 +40,12 @@ function Tokenomics() {
 
     return (
         <section ref={ref} className="tokenomics">
+            <img
+                className="tokenomics__black-hr"
+                src={BlackHR}
+                alt="Black line"
+            />
+
             <img
                 className="tokenomics__vote-paper"
                 src={VotePaper}
