@@ -172,7 +172,8 @@ function Roadmap() {
                     translateY: creshCountingValues,
                 }}
                 transition={{
-                    duration: 4,
+                    duration: 3,
+                    repeatDelay: 2,
                     ease: 'easeInOut',
                     repeat: Infinity,
                     repeatType: "loop",
