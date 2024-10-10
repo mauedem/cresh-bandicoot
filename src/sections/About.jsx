@@ -13,7 +13,7 @@ import Cloud1 from "../assets/sections/about/Cloud1.svg"
 import Cloud2 from "../assets/sections/about/Cloud2.svg"
 import CreshBandicoot from "../assets/sections/common/CreshBandicoot.png"
 import SpinningBox from "../assets/sections/about/SpinningBox.gif"
-import MainHead from "../assets/sections/about/MainHead2.webp" // 1440 width
+import MainHead from "../assets/sections/about/MainHead.webp"
 import RightPalm from "../assets/sections/about/RightPalm.png"
 import LeftPalm from "../assets/sections/about/LeftPalm.png"
 import Flag from "../assets/sections/about/Flag.webp"

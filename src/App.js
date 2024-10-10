@@ -7,75 +7,90 @@ import BuyCresh from "./sections/BuyCresh";
 import Footer from "./components/common/Footer";
 import LoadingScreen from "./components/common/LoadingScreen";
 
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
+
+import AboutBg from "./assets/sections/about/AboutBg.png"
+import TokenomicsBg from "./assets/sections/tokenomics/TokenomicsBg.png"
+import RoadmapBg from "./assets/sections/roadmap/RoadmapBg.png"
+import BuyCreshBg from "./assets/sections/buy-cresh/BuyCreshBg.png"
+import CreshBandicoot from "./assets/sections/about/CreshBandicoot.svg"
+import Clouds from "./assets/sections/about/Clouds.png"
+import Cloud1 from "./assets/sections/about/Cloud1.svg"
+import Cloud2 from "./assets/sections/about/Cloud2.svg"
+import MainHead from "./assets/sections/about/MainHead.webp"
+import RightPalm from "./assets/sections/about/RightPalm.png"
+import LeftPalm from "./assets/sections/about/LeftPalm.png"
+import Flag from "./assets/sections/about/Flag.webp"
+import SpinningBox from "./assets/sections/about/SpinningBox.gif"
+import KamilaFlying from "./assets/sections/about/KamilaFlying.webp"
+import CreshRiding from "./assets/sections/about/CreshRiding.png"
 
 function App() {
     const [loading, setLoading] = useState(true);
     const [progress, setProgress] = useState(0);
 
     useEffect(() => {
-        const loadResource = async () => {
-            await new Promise((resolve) => setTimeout(resolve, 2000));
-        };
+        const images = [
+            AboutBg,
+            TokenomicsBg,
+            RoadmapBg,
+            BuyCreshBg,
+            CreshBandicoot,
+            Clouds,
+            Cloud1,
+            Cloud2,
+            MainHead,
+            RightPalm,
+            LeftPalm,
+            Flag,
+            SpinningBox,
+            KamilaFlying,
+            CreshRiding,
+        ];
 
-        const loadImages = () => {
-            const images = Array.from(document.images);
-            const imagePromises = images.map(img => {
-                return new Promise((resolve, reject) => {
-                    if (img.complete) {
-                        resolve();
-                    } else {
-                        img.onload = resolve;
-                        img.onerror = reject;
-                    }
-                });
-            });
-            return Promise.all(imagePromises);
-        };
+        let loadedImages = 0;
+        const totalImages = images.length;
 
-        const loadStylesheets = () => {
-            const stylesheets = Array.from(document.styleSheets);
-            const stylesheetPromises = stylesheets.map(sheet => {
-                return new Promise((resolve) => {
-                    try {
-                        if (!sheet.href) {
-                            resolve();
-                        }
-                        const link = document.createElement('link');
-                        link.href = sheet.href;
-                        link.onload = resolve;
-                    } catch (e) {
-                        resolve();
-                    }
-                });
-            });
-            return Promise.all(stylesheetPromises);
-        };
+        const start = Date.now();
 
-        const loadAssets = async () => {
-            try {
-                await Promise.all([loadResource(), loadImages(), loadStylesheets()]);
-                setLoading(false);
-            } catch (error) {
-                console.error("Ошибка загрузки ресурсов:", error);
-            }
-        };
+        images.forEach((src) => {
+            const img = new Image();
 
-        loadAssets();
-    }, []);
+            img.src = src;
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setProgress((prev) => {
-                if (prev >= 100) {
-                    clearInterval(interval);
-                    return 100;
+            img.onload = () => {
+                loadedImages++;
+                setProgress(Math.floor((loadedImages / totalImages) * 100));
+
+                if (loadedImages === totalImages) {
+                    const end = Date.now();
+
+                    const elapsed = end - start;
+
+                    // Проверяем, прошло ли 2 секунды.
+                    const timeToWait = Math.max(2000 - elapsed, 0);
+
+                    setTimeout(() => {
+                        setLoading(false);
+                    }, timeToWait);
                 }
-                return prev + 1; // Увеличивать прогресс на 1%
-            });
-        }, 20); // Каждые 20 мс
+            };
+        });
 
-        return () => clearInterval(interval);
+        const handleStyleLoad = () => {
+            setProgress((prev) => Math.min(prev + 50, 100));
+        };
+
+        const styleSheets = document.styleSheets;
+        Array.from(styleSheets).forEach((sheet) => {
+            try {
+                if (sheet.cssRules) {
+                    handleStyleLoad();
+                }
+            } catch (err) {
+                console.log('Error loading styles')
+            }
+        });
     }, []);
 
     return (
@@ -95,7 +110,7 @@ function App() {
                     <BuyCresh />
 
                     <div className="app__footer">
-                        <Footer/>
+                        <Footer />
                     </div>
                 </>
             )}
