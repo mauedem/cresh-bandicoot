@@ -10,16 +10,12 @@ import './LinkButton.css'
 import Star from "../../assets/sections/common/Star.svg"
 import MenuOpen from "../../assets/sections/common/MenuOpen.svg"
 
-
 function Header() {
     const [isTheEndOfPage, setIsTheEndOfPage] = useState(false);
     const [isMenuVisible, setIsMenuVisible] = useState(false);
 
-    /* TODO поправить переход к Tokenomics */
     function goToHrefName(href) {
         document.getElementById(href).scrollIntoView({ behavior: 'smooth' });
-
-        // window.location.hash = href;
 
         setIsMenuVisible(false);
     }

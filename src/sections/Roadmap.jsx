@@ -276,14 +276,14 @@ function Roadmap() {
                     {isVisible &&
                         <motion.div
                             className="roadmap__roadmap-cards"
-                            initial={{y: 400}}  // Начальная позиция ниже экрана
+                            initial={{y: 400}}
                             animate={controls}
                             transition={{
                                 duration: 1,
                                 ease: "easeOut",
                             }}
                             style={{
-                                transform: 'translateX(-50%)', // Центрируем по горизонтали
+                                transform: 'translateX(-50%)',
                             }}
                         >
                             {roadmapPhases}
@@ -294,14 +294,14 @@ function Roadmap() {
                 <div className="roadmap__roadmap-card">
                     {isVisible &&
                         <motion.div
-                            initial={{y: 400}}  // Начальная позиция ниже экрана
+                            initial={{y: 400}}
                             animate={controls}
                             transition={{
                                 duration: 1,
                                 ease: "easeOut",
                             }}
                             style={{
-                                transform: 'translateX(-50%)', // Центрируем по горизонтали
+                                transform: 'translateX(-50%)',
                             }}
                         >
                             <RoadmapCard

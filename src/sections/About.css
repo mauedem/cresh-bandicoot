@@ -4,16 +4,6 @@
     width: 100%;
     max-width: 1748px;
     scroll-behavior: smooth;
-
-    /* TODO доработать или убрать */
-    /*scroll-padding-block: 0;*/
-    /*scroll-margin-block: 0;*/
-
-    /*scroll-snap-stop: always;*/
-    /*scroll-snap-type: y mandatory;*/
-    /*overflow-y: scroll;*/
-
-    scroll-snap-align: start !important;
 }
 
 .about__part-1 {
@@ -23,8 +13,6 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
     overflow: hidden;
-
-    /*scroll-snap-align: start !important;*/
 }
 
 .about__part-2 {
@@ -36,8 +24,6 @@
     background-position: top -1070px right 0;
     background-repeat: no-repeat;
     bottom: 32%;
-
-    /*scroll-snap-align: start !important;*/
 }
 
 .about__cresh-content {
@@ -56,6 +42,10 @@
     position: absolute;
     top: -40px;
     z-index: 999;
+}
+
+.about__cresh-trump {
+    width: 1440px;
 }
 
 .about__about-card {

@@ -12,9 +12,6 @@
     flex-direction: column;
     align-items: center;
     align-self: center;
-
-    /* TODO доработать или убрать */
-    scroll-snap-align: start;
 }
 
 .buy-cresh__cresh-and-ball {

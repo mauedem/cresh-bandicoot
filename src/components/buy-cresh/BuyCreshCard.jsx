@@ -1,14 +1,75 @@
-import {useRef, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 
 import './BuyCreshCard.css'
 
 import EmptyCircle from "../../assets/sections/buy-cresh/EmptyCircle.svg"
 import FilledCircle from "../../assets/sections/buy-cresh/FilledCircle.svg"
 
+import confetti from "canvas-confetti";
+
 function BuyCreshCard({ steps }) {
     const [currentStep, setCurrentStep] = useState(steps[0]);
+    const [hasBuyCreshCardBeenVisible, setHasBuyCreshCardBeenVisible] = useState(false);
 
+    const buyCreshCardRef = useRef(null);
     const stepRef = useRef(null);
+
+    const scalar = 2;
+    const unicorn = confetti.shapeFromText({text: '🍋', scalar});
+
+    const defaults = {
+        spread: 360,
+        ticks: 60,
+        gravity: 0,
+        decay: 0.96,
+        startVelocity: 20,
+        shapes: [unicorn],
+        scalar
+    };
+
+    const shoot = () => {
+        confetti({
+            ...defaults,
+            particleCount: 30
+        });
+
+        confetti({
+            ...defaults,
+            particleCount: 5,
+            flat: true
+        });
+
+        confetti({
+            ...defaults,
+            particleCount: 15,
+            scalar: scalar / 2,
+            shapes: ['circle']
+        });
+    };
+
+    const handleScroll = () => {
+        if (buyCreshCardRef.current) {
+            const rect = buyCreshCardRef.current.getBoundingClientRect();
+
+            if (rect.top <= window.innerHeight && rect.bottom >= 0 && !hasBuyCreshCardBeenVisible) {
+                setTimeout(shoot, 0);
+                setTimeout(shoot, 100);
+                setTimeout(shoot, 200);
+
+                setHasBuyCreshCardBeenVisible(true);
+            } else if (rect.bottom < 0 || rect.top > window.innerHeight) {
+                setHasBuyCreshCardBeenVisible(false);
+            }
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [hasBuyCreshCardBeenVisible]);
 
     const imgItems = steps.map((step, idx) => {
         return (
@@ -32,7 +93,7 @@ function BuyCreshCard({ steps }) {
     }
 
     return (
-        <div className="buy-cresh-card">
+        <div ref={buyCreshCardRef} className="buy-cresh-card">
             <div className="buy-cresh-card__wrapper">
                 <div
                     className="buy-cresh-card__title buy-cresh-card__title--red"

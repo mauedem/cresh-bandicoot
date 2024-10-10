@@ -13,7 +13,7 @@ import Cloud1 from "../assets/sections/about/Cloud1.svg"
 import Cloud2 from "../assets/sections/about/Cloud2.svg"
 import CreshBandicoot from "../assets/sections/common/CreshBandicoot.png"
 import SpinningBox from "../assets/sections/about/SpinningBox.gif"
-import MainHead from "../assets/sections/about/MainHead.webp"
+import MainHead from "../assets/sections/about/MainHead2.webp" // 1440 width
 import RightPalm from "../assets/sections/about/RightPalm.png"
 import LeftPalm from "../assets/sections/about/LeftPalm.png"
 import Flag from "../assets/sections/about/Flag.webp"
@@ -32,7 +32,20 @@ function About() {
 
     const [currentScreenWidth, setCurrentScreenWidth] = useState(0);
 
+    const controls = useAnimation();
+
+    const aboutCardRef = useRef(null);
+    const [isAboutCardReached, setIsAboutCardReached] = useState(false);
+    const [isAboutCardVisible, setIsAboutCardVisible] = useState(false);
+
+    const originCardRef = useRef(null);
+    const [isOriginCardReached, setIsOriginCardReached] = useState(false);
+    const [isOriginCardVisible, setIsOriginCardVisible] = useState(false);
+
+    const creshContentRef = useRef(null);
+
     useEffect(() => {
+        // Отложенная анимация Main Head
         const timer = setTimeout(() => {
             setIsMainHeadAnimating(true);
         }, 1000);
@@ -40,42 +53,25 @@ function About() {
         return () => clearTimeout(timer);
     }, []);
 
-    const aboutCardRef = useRef(null);
-
-    const controls = useAnimation();
-
-    const [isAboutCardVisible, setIsAboutCardVisible] = useState(false);
-    const [isAboutCardVisible2, setIsAboutCardVisible2] = useState(false);
-
-    const originCardRef = useRef(null);
-
-    const [isOriginCardVisible, setIsOriginCardVisible] = useState(false);
-    const [isOriginCardVisible2, setIsOriginCardVisible2] = useState(false);
-
-    const creshContentRef = useRef(null);
-
     const handleScroll = () => {
         const width = window.innerWidth;
-
-        const aboutRect = aboutCardRef.current.getBoundingClientRect();
-        const originRect = originCardRef.current.getBoundingClientRect();
-
-        if (width < 1200) {
-            setTimeout(() => setIsAboutCardVisible2(false))
-            setTimeout(() => setIsOriginCardVisible2(false))
-        }
-
         setCurrentScreenWidth(width);
 
-
-        if (aboutRect.top >= 0 && aboutRect.bottom <= window.innerHeight) {
-            setTimeout(() => setIsAboutCardVisible(true), 300)
-            setTimeout(() => setIsAboutCardVisible2(true), 300)
+        if (width < 1200) {
+            setTimeout(() => setIsAboutCardVisible(false))
+            setTimeout(() => setIsOriginCardVisible(false))
         }
 
+        const aboutRect = aboutCardRef.current.getBoundingClientRect();
+        if (aboutRect.top >= 0 && aboutRect.bottom <= window.innerHeight) {
+            setTimeout(() => setIsAboutCardReached(true), 300)
+            setTimeout(() => setIsAboutCardVisible(true), 300)
+        }
+
+        const originRect = originCardRef.current.getBoundingClientRect();
         if (originRect.top >= 0 && originRect.bottom <= window.innerHeight) {
+            setTimeout(() => setIsOriginCardReached(true), 300)
             setTimeout(() => setIsOriginCardVisible(true), 300)
-            setTimeout(() => setIsOriginCardVisible2(true), 300)
         }
     };
 
@@ -116,20 +112,20 @@ function About() {
     }, []);
 
     useEffect(() => {
-        if (isAboutCardVisible) {
+        if (isAboutCardReached) {
             controls.start({y: 0});
         } else {
             controls.start({y: -400})
         }
-    }, [isAboutCardVisible, controls]);
+    }, [isAboutCardReached, controls]);
 
     useEffect(() => {
-        if (isOriginCardVisible) {
+        if (isOriginCardReached) {
             controls.start({y: 0});
         } else {
             controls.start({y: -400})
         }
-    }, [isOriginCardVisible, controls]);
+    }, [isOriginCardReached, controls]);
 
     return (
         <section className="about">
@@ -194,12 +190,12 @@ function About() {
                          ref={aboutCardRef}
                          className="about__about-card"
                     >
-                        {isAboutCardVisible2 && currentScreenWidth >= 1200 &&
+                        {isAboutCardVisible && currentScreenWidth >= 1200 &&
                             <motion.div
                                 initial={{y: 400}}
                                 animate={controls}
                                 transition={{
-                                    duration: 2,
+                                    duration: 1,
                                     ease: "easeOut",
                                 }}
                                 style={{
@@ -209,6 +205,7 @@ function About() {
                                 <AboutCard/>
                             </motion.div>
                         }
+
                         {currentScreenWidth < 1200 &&
                             <AboutCard/>
                         }
@@ -219,12 +216,12 @@ function About() {
                         ref={originCardRef}
                         className="about__origin-card"
                     >
-                        {isOriginCardVisible2 && currentScreenWidth >= 1200 &&
+                        {isOriginCardVisible && currentScreenWidth >= 1200 &&
                             <motion.div
                                 initial={{y: 400}}
                                 animate={controls}
                                 transition={{
-                                    duration: 2,
+                                    duration: 1,
                                     ease: "easeOut",
                                 }}
                                 style={{

@@ -10,19 +10,58 @@ import LoadingScreen from "./components/common/LoadingScreen";
 import {useEffect, useState} from "react";
 
 function App() {
-    /* TODO вернуть загрузочный экран useState(true) */
     const [loading, setLoading] = useState(true);
     const [progress, setProgress] = useState(0);
 
     useEffect(() => {
         const loadResource = async () => {
             await new Promise((resolve) => setTimeout(resolve, 2000));
-
-            /* TODO расскомментировать */
-            setLoading(false);
         };
 
-        loadResource();
+        const loadImages = () => {
+            const images = Array.from(document.images);
+            const imagePromises = images.map(img => {
+                return new Promise((resolve, reject) => {
+                    if (img.complete) {
+                        resolve();
+                    } else {
+                        img.onload = resolve;
+                        img.onerror = reject;
+                    }
+                });
+            });
+            return Promise.all(imagePromises);
+        };
+
+        const loadStylesheets = () => {
+            const stylesheets = Array.from(document.styleSheets);
+            const stylesheetPromises = stylesheets.map(sheet => {
+                return new Promise((resolve) => {
+                    try {
+                        if (!sheet.href) {
+                            resolve();
+                        }
+                        const link = document.createElement('link');
+                        link.href = sheet.href;
+                        link.onload = resolve;
+                    } catch (e) {
+                        resolve();
+                    }
+                });
+            });
+            return Promise.all(stylesheetPromises);
+        };
+
+        const loadAssets = async () => {
+            try {
+                await Promise.all([loadResource(), loadImages(), loadStylesheets()]);
+                setLoading(false);
+            } catch (error) {
+                console.error("Ошибка загрузки ресурсов:", error);
+            }
+        };
+
+        loadAssets();
     }, []);
 
     useEffect(() => {

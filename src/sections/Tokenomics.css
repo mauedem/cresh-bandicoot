@@ -8,15 +8,6 @@
     background-position: center;
     background-repeat: no-repeat;
     z-index: 100;
-
-    /* TODO убрать или доработать */
-    scroll-behavior: smooth;
-    scroll-padding-block: 0;
-    scroll-margin-block: 0;
-    scroll-snap-stop: always;
-    scroll-snap-type: y mandatory;
-
-    scroll-snap-align: start;
 }
 
 .tokenomics__content {

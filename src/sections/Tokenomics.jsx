@@ -12,38 +12,37 @@ function Tokenomics() {
     const tokenomicsRef = useRef();
 
     const controls = useAnimation();
-    const [isVisible, setIsVisible] = useState(false);
-    const [isVisible2, setIsVisible2] = useState(false);
+    const [isTokenomicsCardReached, setIsTokenomicsCardReached] = useState(false);
+    const [isTokenomicsCardVisible, setIsTokenomicsCardVisible] = useState(false);
 
     const handleScroll = () => {
         const rect = tokenomicsRef.current.getBoundingClientRect();
 
-        /* TODO добавить opacity */
         if (rect.top >= 0) {
-            setTimeout(() => setIsVisible(true), 300)
-            setTimeout(() => setIsVisible2(true), 300)
+            setTimeout(() => setIsTokenomicsCardReached(true), 300)
+            setTimeout(() => setIsTokenomicsCardVisible(true), 300)
         } else if (rect.top < -130) {
-            setTimeout(() => setIsVisible(false), 300)
+            setTimeout(() => setIsTokenomicsCardReached(false), 300)
         }
     };
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
+
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
 
     useEffect(() => {
-        if (isVisible) {
+        if (isTokenomicsCardReached) {
             controls.start({y: 0});
         } else {
             controls.start({y: -400}).then(() => {
-                // Здесь можно вызвать дополнительные действия, если нужно
-                setIsVisible2(false);
+                setIsTokenomicsCardVisible(false);
             });
         }
-    }, [isVisible, controls]);
+    }, [isTokenomicsCardReached, controls]);
 
     return (
         <section id="tokenomics" ref={tokenomicsRef} className="tokenomics">
@@ -60,12 +59,12 @@ function Tokenomics() {
             />
 
             <div className="tokenomics__content">
-                {isVisible2 &&
+                {isTokenomicsCardVisible &&
                     <motion.div
                         initial={{y: 400}}
                         animate={controls}
                         transition={{
-                            duration: 1,
+                            duration: 0.5,
                             ease: "easeOut",
                         }}
                         style={{

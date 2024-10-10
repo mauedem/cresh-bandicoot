@@ -29,7 +29,7 @@ function TokenomicsCard() {
                         <div className="tokenomics-card__content--value">$CRESH</div>
                         <div className="tokenomics-card__content--value">Ethereum</div>
                         <div className="tokenomics-card__content--value">1,000,000,000</div>
-                        <div className="tokenomics-card__content--value">1.5</div>
+                        <div className="tokenomics-card__content--value">1 ETH</div>
                         <div className="tokenomics-card__content--value">6 months</div>
                         <div className="tokenomics-card__content--value">0%</div>
                     </div>
