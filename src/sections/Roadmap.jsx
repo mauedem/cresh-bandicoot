@@ -137,7 +137,7 @@ function Roadmap() {
     }
 
     return (
-        <section ref={roadmapRef} className="roadmap">
+        <section ref={roadmapRef} className="roadmap scrollable">
             <img
                 className="roadmap__table"
                 src={Table}

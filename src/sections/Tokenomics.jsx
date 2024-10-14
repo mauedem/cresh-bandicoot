@@ -45,7 +45,7 @@ function Tokenomics() {
     }, [isTokenomicsCardReached, controls]);
 
     return (
-        <section id="tokenomics" ref={tokenomicsRef} className="tokenomics">
+        <section id="tokenomics" ref={tokenomicsRef} className="tokenomics scrollable">
             <img
                 className="tokenomics__black-hr"
                 src={BlackHR}

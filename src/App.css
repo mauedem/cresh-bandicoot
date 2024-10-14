@@ -23,6 +23,22 @@ html {
     width: 100%;
 }
 
+/* Скрытие скроллбара для веб-китов и Chrome */
+::-webkit-scrollbar {
+    display: none !important; /* Скрывает скроллбар */
+    width: 0 !important;
+}
+
+/* Скрытие скроллбара для Firefox */
+.scrollable {
+    scrollbar-width: none !important; /* Для Firefox */
+}
+
+/* Скрытие скроллбара для IE и Edge */
+.scrollable {
+    -ms-overflow-style: none !important; /* Для IE и Edge */
+}
+
 @font-face {
     font-family: "Bagel Fat One";
     font-style: normal;
