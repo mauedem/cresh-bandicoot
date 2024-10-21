@@ -1,6 +1,7 @@
 import './TokenomicsCard.css'
 
 import AboutCardStars from "../../assets/sections/about/AboutCardStars.svg"
+import {TOKEN} from "../../utils/constants";
 
 function TokenomicsCard() {
     return (
@@ -12,7 +13,9 @@ function TokenomicsCard() {
                 <a>Tokenomics</a>
             </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <div className="tokenomics-card__token">{TOKEN}</div>
+
+            <div style={{display: 'flex', flexDirection: 'column'}}>
                 <div className="tokenomics-card__content">
                     <div style={{display: 'flex', flexDirection: 'column', marginRight: '14px'}}>
                         <div className="tokenomics-card__content--key">Name:</div>
@@ -35,7 +38,7 @@ function TokenomicsCard() {
                     </div>
                 </div>
 
-                <div className="tokenomics-card--scrolling-height">
+                <div>
                     <img
                         className="tokenomics-card__decoration"
                         src={AboutCardStars}

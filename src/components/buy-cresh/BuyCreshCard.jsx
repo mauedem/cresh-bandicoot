@@ -88,9 +88,9 @@ function BuyCreshCard({ steps }) {
     function handleClick(idx) {
         stepRef.current.classList.add('step--hidden');
 
-        setCurrentStep(steps[idx])
-
         setTimeout(() => stepRef.current.classList.remove('step--hidden'), 500)
+
+        setTimeout(() => setCurrentStep(steps[idx]), 500)
     }
 
     function handleBuyClick(linkHref) {

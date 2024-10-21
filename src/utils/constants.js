@@ -48,6 +48,8 @@ export const LINK_ITEMS = [
 
 export const BUY_CRESH_LINK = 'https://app.uniswap.org/explore/tokens/ethereum/0xefc405ec2bcc3b03dc3d05cdc104e7c7694c48db'
 
+export const TOKEN = '0xEfc405ec2bcC3b03DC3d05cdC104E7C7694C48dB'
+
 export const PHASES = [
     {
         id: 1,
