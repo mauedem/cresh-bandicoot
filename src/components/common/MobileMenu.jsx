@@ -4,8 +4,13 @@ import Star from "../../assets/sections/common/Star.svg";
 import MenuClose from "../../assets/sections/common/MenuClose.svg";
 import CreshBandicoot from "../../assets/sections/common/CreshBandicoot.png";
 import Footer from "./Footer";
+import {BUY_CRESH_LINK} from "../../utils/constants";
 
 function MobileMenu({ navItems, handleMenuVisible }) {
+    function handleClick(linkHref) {
+        window.open(linkHref, '_blank');
+    }
+
     return (
         <div className="mobile-menu">
             <button
@@ -29,6 +34,7 @@ function MobileMenu({ navItems, handleMenuVisible }) {
             <button
                 className="buy-cresh-btn"
                 style={{marginBottom: '14px'}}
+                onClick={() => handleClick(BUY_CRESH_LINK)}
             >
                 <img
                     className="buy-cresh-btn__img"

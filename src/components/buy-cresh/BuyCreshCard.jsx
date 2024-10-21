@@ -6,6 +6,7 @@ import EmptyCircle from "../../assets/sections/buy-cresh/EmptyCircle.svg"
 import FilledCircle from "../../assets/sections/buy-cresh/FilledCircle.svg"
 
 import confetti from "canvas-confetti";
+import {BUY_CRESH_LINK} from "../../utils/constants";
 
 function BuyCreshCard({ steps }) {
     const [currentStep, setCurrentStep] = useState(steps[0]);
@@ -92,6 +93,10 @@ function BuyCreshCard({ steps }) {
         setTimeout(() => stepRef.current.classList.remove('step--hidden'), 500)
     }
 
+    function handleBuyClick(linkHref) {
+        window.open(linkHref, '_blank');
+    }
+
     return (
         <div ref={buyCreshCardRef} className="buy-cresh-card">
             <div className="buy-cresh-card__wrapper">
@@ -108,7 +113,10 @@ function BuyCreshCard({ steps }) {
                     <a id="how-to-buy-$cresh">$CRESH</a>
                 </div>
 
-                <button className="buy-cresh-card__buy-cresh-btn buy-cresh-btn">
+                <button
+                    className="buy-cresh-card__buy-cresh-btn buy-cresh-btn"
+                    onClick={() => handleBuyClick(BUY_CRESH_LINK)}
+                >
                     BUY $CRESH
                 </button>
             </div>

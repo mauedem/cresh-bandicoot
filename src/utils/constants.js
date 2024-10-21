@@ -38,14 +38,15 @@ export const LINK_ITEMS = [
         href: "https://x.com/Cresh_ETH",
         src: X,
     },
-    /* TODO добавить актуальную ссылку */
     {
         id: 3,
         name: "Owl",
-        href: "",
+        href: "https://dexscreener.com/ethereum/0xEfc405ec2bcC3b03DC3d05cdC104E7C7694C48dB",
         src: Owl,
     },
 ];
+
+export const BUY_CRESH_LINK = 'https://app.uniswap.org/explore/tokens/ethereum/0xefc405ec2bcc3b03dc3d05cdc104e7c7694c48db'
 
 export const PHASES = [
     {

@@ -1,7 +1,7 @@
 import NavButton from "./NavButton";
 import MobileMenu from "./MobileMenu";
 
-import {LINK_ITEMS, NAV_ITEMS} from "../../utils/constants";
+import {BUY_CRESH_LINK, LINK_ITEMS, NAV_ITEMS} from "../../utils/constants";
 import {useEffect, useState} from "react";
 
 import './Header.css'
@@ -131,7 +131,7 @@ function Header() {
                 </div>
 
                 {!isMenuVisible &&
-                    <button className="buy-cresh-btn">
+                    <button className="buy-cresh-btn" onClick={() => handleClick(BUY_CRESH_LINK)}>
                         <img
                             className="buy-cresh-btn__img"
                             src={Star}
