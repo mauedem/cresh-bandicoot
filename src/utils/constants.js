@@ -35,7 +35,7 @@ export const LINK_ITEMS = [
     {
         id: 2,
         name: "X",
-        href: "https://x.com/CreshERC",
+        href: "https://x.com/Cresh_ETH",
         src: X,
     },
     /* TODO добавить актуальную ссылку */
